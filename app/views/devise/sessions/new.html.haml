@@ -1,17 +1,20 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.main-login
+  .main-login__title
+    Starbucks　Review
+  .main-login__box
+    .main-login__box__title
+      アカウントをお持ちでない方はこちら
+    .main-login__box__button
+      = link_to "新規会員登録", new_registration_path(resource_name), class: "btn-resistration"
+    .main-login__box__form
+      .main-login__box__form__title
+        アカウントをお持ちの方はこちら
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email",class: "main-login__box__form__contanir",placeholder: "メールアドレス"
+        .field
+          = f.password_field :password, autocomplete: "current-password",class: "main-login__box__form__contanir",placeholder: "パスワード"
+        .actions
+          = f.submit "ログイン", class: 'btn-submit'
+        
+    = link_to "パスワードをお忘れの方", new_password_path(resource_name)
