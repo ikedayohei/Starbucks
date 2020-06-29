@@ -83,4 +83,27 @@
       text-decoration: none;
     }
   }
+  .label{
+    margin-right: 200px;
+    height: 30px;
+    width: 50px;
+    color: white;
+    border-radius: 3px;
+  }
+  .new-btn-submit{
+    background-color: #c6893f;
+    width: 250px;
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    text-decoration: inherit;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    &:hover {
+      background-color:#2C2A29;
+      color: #fff;
+    }
+  }
 }

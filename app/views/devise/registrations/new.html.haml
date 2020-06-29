@@ -7,20 +7,17 @@
       .main-login__box__title
         新規会員登録
       .field
-        = f.label :必須, class:"lable"
+        = f.label :必須, class:"label"
         %br/
         = f.email_field :email, autofocus: true, autocomplete: "email",class: "main-login__box__form__contanir",placeholder: "メールアドレス"
       .field
-        = f.label :必須, class:"lable"
-        - if @minimum_password_length
-          %em
-            (#{@minimum_password_length} characters minimum)
-        %br/
-        = f.password_field :password, autocomplete: "new-password",class: "main-login__box__form__contanir",placeholder: "パスワード"
+        = f.label :必須, class:"label"
+        = f.password_field :password, autocomplete: "new-password",class: "main-login__box__form__contanir",placeholder: "パスワード(英数6文字以上"
       .field
-        = f.label :必須, class:"lable"
+        = f.label :必須, class:"label"
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password",class: "main-login__box__form__contanir",placeholder: "パスワード確認",class: "main-login__box__form__contanir"
       .actions
-        = f.submit "新規登録",class: 'btn-submit'
+        = f.submit "新規登録",class: 'new-btn-submit'
+        = link_to "ログインページへ", new_user_session_path,class: 'login-btn-submit'
     
