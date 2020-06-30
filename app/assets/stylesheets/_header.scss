@@ -6,7 +6,9 @@
 .header{
   height: 150px;
   width: 100%;
-  display: flex;
+  &__logo{
+    font-weight: bold;
+  }
   &__loginbox{
     width: 150px;
     height: 50px;
