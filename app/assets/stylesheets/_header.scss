@@ -13,7 +13,7 @@
     color: #ffffff;
     font-weight: bold;
     font-size: 20px;
-    width: 150px;
+    width: 260px;
     height: 50px;
     line-height: 50px;
     padding-left: 10px;
@@ -27,20 +27,52 @@
     color: #ffffff;
     padding-top: 10px;
   }
-  &__loginbox{
+  &__userbox{
     font-weight: bold;
-    width: 200px;
     height: 50px;
     line-height: 50px;
     position: relative;
     top: 100px;
+    display: flex;
     &__text{
       font-size: 20px;
       color: #ffffff;
     }
   }
+  &__loginbox{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 a{
   text-decoration: none;
+}
+
+.exhibition {
+  width: 120px;
+  background: #00704a;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  z-index: 1;
+  a {
+    text-decoration: none;
+  }
+  &__text {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  &__btn {
+    width: 60%;
+  }
+  a {
+    text-decoration: none;
+  }
 }
