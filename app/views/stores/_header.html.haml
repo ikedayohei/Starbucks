@@ -1,0 +1,14 @@
+.header
+  .header__menu
+    Menu
+  .header__logo
+    STARBUCKS Review
+  .header__userbox
+    .header__resistbox
+      = link_to "新規ユーザー登録", "#", class: "header__userbox__text"
+    .header__loginbox
+      = link_to "ログイン", "#", class: "header__userbox__text"
+  .exhibition
+    = link_to "#", data: {"turbolinks" => false}  do
+      %span.exhibition__text 投稿する
+      = image_tag asset_path("coffee-2-128.png"), class: "exhibition__btn"
