@@ -1,0 +1,22 @@
+.main-login
+  .main-login__title
+    Starbucks　Review
+  .main-login__box
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .main-login__box__title
+        アカウントの編集
+      .field
+        = f.label :必須, class:"label"
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email",class: "main-login__box__form__contanir",placeholder: "メールアドレス"
+      .field
+        = f.label :必須, class:"label"
+        = f.password_field :password, autocomplete: "new-password",class: "main-login__box__form__contanir",placeholder: "パスワード(英数6文字以上"
+      .field
+        = f.label :必須, class:"label"
+        %br/
+        = f.password_field :password_confirmation, autocomplete: "new-password",class: "main-login__box__form__contanir",placeholder: "パスワード確認",class: "main-login__box__form__contanir"
+      .actions
+        = f.submit "アカウントの編集",class: 'new-btn-submit'
+        = link_to "トップページへ", new_user_session_path,class: 'login-btn-submit'
