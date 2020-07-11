@@ -3,9 +3,9 @@ $(function() {
     $(".child_category").remove();
     $(".parents_list").css('display','flex');
   });
-  $(".inner__bottom__left__categories--categorie").on("mouseleave", function() {
+  $(".header__store-table").on("mouseleave", function() {
     var hoge = setTimeout(function() {
-      $(".categor").css('display','none');
+      $(".parents_list").css('display','none');
     },500);
     $(".categor2").on("mouseenter", function() {
       $(".child_category").remove();
