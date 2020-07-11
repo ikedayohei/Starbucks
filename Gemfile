@@ -74,3 +74,4 @@ gem 'rspec-rails'
 gem 'kaminari'
 gem "gretel"
 gem 'ancestry'
+gem "mechanize"
