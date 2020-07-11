@@ -73,3 +73,4 @@ gem 'rails-i18n'
 gem 'rspec-rails'
 gem 'kaminari'
 gem "gretel"
+gem 'ancestry'
