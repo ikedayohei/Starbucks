@@ -1,9 +1,21 @@
-.header__store-table
-  店舗一覧
-  .store
-    %ul.store1
-      - @parents.each do |parent|
-        %li.store1__li
-          = link_to "#{parent.name}", store_table_store_path(parent),data: {"turbolinks" => false},id: "#{parent.id}",class:"store2"
-    %ul.store3
-    %ul.store4
+.categories
+  %ul
+    %li
+      = link_to "#", class: "category__search search__btn" do
+        %i.fas.fa-bars.category__icon
+        店舗一覧
+      %ul.category__parent.category__list
+        - @parents.each do |parent|
+          %li
+            = link_to "#", class: "category__parent--name" do
+              = parent.name
+            %ul.category__child.category__list
+              - parent.children.each do |child|
+                %li
+                  = link_to "#", class: "category__child--name" do
+                    = child.name
+                  %ul.category__grandchild.category__list
+                    - child.children.each do |grandchild|
+                      %li
+                        = link_to "#", class: " category__child--name" do
+                          = grandchild.name 

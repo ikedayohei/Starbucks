@@ -1,78 +1,75 @@
-.store {
-  z-index: 2;
+.category__child, .category__parent, .category__grandchild{
   display: none;
+}
+a{
+  color:white;
+}
+.category__icon,.brands__icon{
+  color: red;
+}
+
+// カテゴリーの大枠の要素の共通項
+.category__list{
   position: absolute;
-  background-color: #fff;
-  width: 240px;
-  top: 40px;
+  height: 2000px;
+  width: 200px;
+  background-color: #00704a;;
+  border: 1px solid white;
 }
 
-.store1 {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.store2 {
-  color: #333;
-  text-decoration: none;
-  line-height: 32px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  padding-right: 30px;
-  display: block;
-  width: 240px;
-  padding: 3px 8px 3px 5px;
-  border-bottom: 1px solid #f8f8f8;
-}
-.store1__li {
-  position: relative;
+// 子要素はカテゴリー名の共通項
+.category__child--name{
+  width: 100%;
+  height: 5px;
+  color:white;
+  display: inline-block;
+  font-size: 5px;
+  &:hover{
+    background-color: blue;
+    color: brown;
+  }
 }
 
-.child_store {
-  color: #333;
-  text-decoration: none;
-  line-height: 32px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  padding-right: 30px;
-  display: block;
-  width: 120px;
-  padding: 3px 8px 3px 5px;
-  border-bottom: 1px solid #f8f8f8;
-}
-
-.store3 {
-  min-height: 480px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 240px;
-}
-.store4 {
-  min-height: 480px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 480px;
-}
-
-.grand_child_store {
-  color: #333;
-  text-decoration: none;
-  line-height: 32px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  padding-right: 30px;
-  display: block;
-  width: 240px;
-  padding: 3px 8px 3px 5px;
-  border-bottom: 1px solid #f8f8f8;
+.categories{
+  padding-top: 50px;
+  height: 10px;
+  &:hover{
+    .category__parent{
+      display: block;
+      &--name{
+        width: 100%;
+        height: 10px;
+        color:white;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 13px;
+      }
+      li {
+        &:hover{
+          .category__child{
+            width: 100%;
+            display: block;
+            top: 0;
+            left: 100px;
+            &--name{
+              width: 100%;
+              color:white;
+              display: inline-block;
+              font-size: 9px;
+            }
+            li {
+              &:hover{
+                .category__grandchild{
+                  width: 300px;
+                  display: block;
+                  top: 0;
+                  left: 150px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
