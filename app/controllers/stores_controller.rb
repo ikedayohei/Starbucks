@@ -3,15 +3,21 @@ class StoresController < ApplicationController
 
   def index
     @parents = Store.where(ancestry: nil)
-  end
-
-  def new
-    @children = Category.find(params[:parent_id]).children
+    @children = Store.where(store_id: "58")
     respond_to do |format|
       format.html
       format.json
     end
   end
+
+  def new
+    @children = Store.find(params[:parent_id]).children
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   
 end
 

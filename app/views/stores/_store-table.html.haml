@@ -3,6 +3,7 @@
   .store
     %ul.store1
       - @parents.each do |parent|
-        = link_to "#{parent.name}", store_table_store_index_path(parent.id),data: {"turbolinks" => false},id: "#{parent.id}",class:"store2"
-    %ul.store2
+        %li.store1__li
+          = link_to "#{parent.name}", store_table_store_path(parent),data: {"turbolinks" => false},id: "#{parent.id}",class:"store2"
     %ul.store3
+    %ul.store4
