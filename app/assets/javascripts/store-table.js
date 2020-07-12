@@ -1,26 +1,26 @@
 $(function() {
   $(document).on("mouseenter", ".header__store-table", function() {
     $(".child_category").remove();
-    $(".parents_list").css('display','flex');
+    $(".store").css('display','flex');
   });
   $(".header__store-table").on("mouseleave", function() {
     var hoge = setTimeout(function() {
-      $(".parents_list").css('display','none');
+      $(".store").css('display','none');
     },500);
-    $(".categor2").on("mouseenter", function() {
+    $(".store2").on("mouseenter", function() {
       $(".child_category").remove();
       clearTimeout(hoge);
     });
   });
-  $(".categor").on("mouseleave", function() {
-    $(".categor").css('display','none');
+  $(".store").on("mouseleave", function() {
+    $(".store").css('display','none');
   });
-  $(".categor2").on("mouseenter", function() {
+  $(".storer2").on("mouseenter", function() {
     $(".child_category").remove();
     var id = this.id
     $("#" + id).css('color','red');
   });
-  $(".categor2").on("mouseleave", function() {
+  $(".store2").on("mouseleave", function() {
     var id = this.id
     $("#" + id).css('color','#333');
   });

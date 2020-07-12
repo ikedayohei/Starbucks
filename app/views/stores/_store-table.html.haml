@@ -1,5 +1,8 @@
 .header__store-table
   店舗一覧
-  .parents_list
-    - @parents.each do |parent|
-      = link_to "#{parent.name}", store_table_store_index_path(parent.id),data: {"turbolinks" => false},id: "#{parent.id}",class:"categor2"
+  .store
+    %ul.store1
+      - @parents.each do |parent|
+        = link_to "#{parent.name}", store_table_store_index_path(parent.id),data: {"turbolinks" => false},id: "#{parent.id}",class:"store2"
+    %ul.store2
+    %ul.store3
