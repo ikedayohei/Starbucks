@@ -121,6 +121,15 @@ nara_5.children.create([{name: "大和高田店"}])
 nara_6 = nara.children.create(name: "北葛城郡")
 nara_6.children.create([{name: "奈良西大和ニュータウン店"}])
 
+wakayama = Store.create(name: "和歌山県")
+wakayama_1 = wakayama .children.create(name: "和歌山市")
+wakayama_1.children.create([{name: "蔦屋書店 和歌山市民図書館店"},{name: "和歌山昭和通り店"},{name: "ガーデンパーク和歌山店"},{name: "イオンモール和歌山店"},{name: "和歌山パームシティ店"},{name: "和歌山県立医科大学附属病院店"},{name: "TSUTAYA 和歌山高松店"}])
+wakayama_2 = wakayama.children.create(name: "海南市")
+wakayama_2.children.create([{name: "海南nobinos店"}])
+wakayama_3 = wakayama.children.create(name: "岩出市")
+wakayama_3.children.create([{name: "和歌山岩出店"}])
+
+
 
 
 
