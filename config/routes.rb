@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   root 'stores#index'
   resources :stores do
-    member do
-      get 'store_table'
+    collection do
+      get 'search'
     end
   end
 end

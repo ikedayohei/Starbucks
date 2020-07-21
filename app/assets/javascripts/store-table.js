@@ -1,88 +1,82 @@
-$(function() {
-  $(document).on("mouseenter", ".header__store-table", function() {
-    $(".child_store").remove();
-    $(".store").css('display','flex');
-  });
-  $(".header__store-table").on("mouseleave", function() {
-    var hoge = setTimeout(function() {
-      $(".store").css('display','none');
-    },500);
-    $(".store2").on("mouseenter", function() {
-      $(".child_store").remove();
-      clearTimeout(hoge);
-    });
-  });
-  $(".store").on("mouseleave", function() {
-    $(".store").css('display','none');
-  });
-  $(".store2").on("mouseenter", function() {
-    $(".child_store").remove();
-    var id = this.id
-    $("#" + id).css('color','red');
-  });
-  $(".store2").on("mouseleave", function() {
-    var id = this.id
-    $("#" + id).css('color','#333');
+$(document).on('turbolinks:load', ()=> {
+  $('#parent-form').on('change', function(){
+    let parentValue = document.getElementById("parent-form").value;
+    
+    if (parentValue != "選択してください"){
+    $.ajax({
+      url: '/stores/search',
+      type: "GET",
+      data: {
+        parent_id: parentValue // 親ボックスの値をparent_idという変数にする。
+      },
+      dataType: 'json'
+      //json形式を指定
+      
+    })
+    .done(function(data){
+      $('#child-form').remove();
+      $('#grandchild-form').remove();
+      function childrenselect(data) {
+      
+      let opt1 = data.map(x=> `<option value="${x.id}">${x.name}</option>`)
+        let opt = opt1.join('');
+        
+        let tako = `<option value="">選択してください</option>
+        ${opt}`;
+        let h = `<select name="" id="child-form" selected>${tako} </select>`; //colection_selectのとこ
+        return h
+      }
+      var html = childrenselect(data);
+      $('#formId').append(html);
+    })
+    .fail(function() {
+      alert('error');
+    }); 
+  }else{
+    $('#child-form').remove();
+    $('#grandchild-form').remove();
+  }
   });
   
-  function buildChildHTML(child){
-    var html = ` <a class="child_store" id="${child.id} "href="store/${child.id}/store_table/">${child.name}</a>`;
-    return html;
-  }
-  $(".store2").on("mouseenter", function() {
-    var id = this.id
-    var url = $(this).attr('action');
-    $(".child_store").remove();
-    $(".grand_child_store").remove();
+  
+  
+  
+  $(document).on('change','#child-form', function(){
+    let parentValue = document.getElementById("child-form").value;
+    if(parentValue != "選択してください"){
     $.ajax({
-      type: 'GET',
-      url: url,
-      data: {parent_id: id},
+      url: '/stores/search',
+      type: "GET",
+      data: {
+        parent_id: parentValue // 親ボックスの値をparent_idという変数にする。
+      },
       dataType: 'json'
-    }).done(function(children) {
-      children.forEach(function (child) {//帰ってきた子カテゴリー（配列）
-        var html = buildChildHTML(child);//HTMLにして
-        $(".store3").append(html);//リストに追加します
+      //json形式を指定
+    })
+    .done(function(data){
+      if (data.length !=0){
+        $('#grandchild-form').remove();
+        
+        function childrenselect(data) {
+          
+          let opt1 = data.map(x=> `<option value="${x.id}">${x.name}</option>`)
+          let opt = opt1.join('');  
+    
+          let tako = `<option value="">選択してください</option>
+          ${opt}`;
+          let h = `<select name="product[category_id]" id="grandchild-form" selected>${tako} </select>`; //colection_selectのとこ
+          return h
+        }
+        var html = childrenselect(data);
+        $('#formId').append(html);
+      }
       })
-      $(".child_category").on("mouseenter", function() {
-        var id = this.id
-        $("#" + id).css('color','red');
-      });
-      $(".child_store").on("mouseleave", function() {
-        var id = this.id
-        $("#" + id).css('color','#333');
-      });
-    });
+      .fail(function() {
+        alert('error');
+      })
+    }else{
+      $('#grandchild-form').remove();
+    }
   });
-  function buildGrandChildHTML(child){
-    var html =`<a class="grand_child_store" id="${child.id}"
-               href="store/${child.id}/store_table/">${child.name}</a>`;
-    return html;
-  }
-  $(document).on("mouseenter", ".child_store", function () {//子カテゴリーのリストは動的に追加されたHTMLのため
-    var id = this.id
-    var url = $(this).attr('action');
-    $.ajax({
-      type: 'GET',
-      url: url,
-      data: {parent_id: id},
-      dataType: 'json'
-    }).done(function(children) {
-      children.forEach(function (child) {
-        var html = buildGrandChildHTML(child);
-        $(".store4").append(html);
-      })
-      $(document).on("mouseenter", ".child_store", function () {
-        $(".grand_child_store").remove();
-      });
-      $(".grand_child_store").on("mouseenter", function() {
-        var id = this.id
-        $("#" + id).css('color','red');
-      });
-      $(".grand_child_store").on("mouseleave", function() {
-        var id = this.id
-        $("#" + id).css('color','#333');
-      });
-    });
-  });  
-});  
+  })
+  
