@@ -59,8 +59,15 @@ aomori_4.children.create([{name: "青森ELM店"}])
 aomori_5= aomori.children.create(name: "上北郡")
 aomori_5.children.create([{name: "イオンモール下田店"}])
 
-
-
+iwate = Store.create(name: "岩手県")
+iwate_1= iwate.children.create(name: "盛岡市")
+iwate_1.children.create([{name: "盛岡菜園店"},{name: "盛岡フェザン店"},{name: "イオンモール盛岡店"},{name: "盛岡西バイパス店"},{name: "イオンモール盛岡南店"}])
+iwate_2= iwate.children.create(name: "一関市")
+iwate_2.children.create([{name: "一関店"}])
+iwate_3= iwate.children.create(name: "奥州市 ")
+iwate_3.children.create([{name: "奥州水沢店"}])
+iwate_4= iwate.children.create(name: "北上市")
+iwate_4.children.create([{name: "北上店"}])
 
 
 
