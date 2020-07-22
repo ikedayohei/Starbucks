@@ -47,8 +47,17 @@ Hokkaido_15.children.create([{name: "釧路鶴見橋店"}])
 Hokkaido_16= Hokkaido.children.create(name: "釧路郡")
 Hokkaido_16.children.create([{name: "イオン釧路店"}])
 
-
-
+aomori = Store.create(name: "青森県")
+aomori_1= aomori.children.create(name: "青森市")
+aomori_1.children.create([{name: "青森中央店"},{name: "青森西バイパス店"},{name: "青森ラビナ店"}])
+aomori_2= aomori.children.create(name: "八戸市 ")
+aomori_2.children.create([{name: "八戸田向店"},{name: "八戸城下店"},{name: "八戸根城店"}])
+aomori_3= aomori.children.create(name: "弘前市")
+aomori_3.children.create([{name: "TSUTAYA BOOKSTORE 弘前ヒロロ店"},{name: "弘前さくら野店"},{name: "弘前公園前店"}])
+aomori_4= aomori.children.create(name: "五所川原市")
+aomori_4.children.create([{name: "青森ELM店"}])
+aomori_5= aomori.children.create(name: "上北郡")
+aomori_5.children.create([{name: "イオンモール下田店"}])
 
 
 
