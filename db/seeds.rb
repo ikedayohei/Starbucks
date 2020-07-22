@@ -5,6 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+
+
+Hokkaido = Store.create(name: "北海道")
+Hokkaido_1 = Hokkaido.children.create(name: "札幌市中央区")
+Hokkaido_1.children.create([{name: "札幌グランドホテル店"},{name: "大同生命札幌ビル ミレド地下1階店"},{name: "大同生命札幌ビル ミレド2階店"},{name: "桜橋プラザビル店"},{name: "中之島三井ビル店"},{name: "グランフロント大阪店"},{name: "LINKS UMEDA 地下1階店"},{name: "LINKS UMEDA 2階店"},{name: "LINKS UMEDA 8階店"},{name: "ちゃやまちアプローズタワー店"},{name: "NU茶屋町プラス店"},{name: "TSUTAYA 梅田 MeRISE店"},{name: "梅田ＨＥＰ ＦＩＶＥ店"},{name: "梅田エスト店"},{name: "阪急サン広場地下通り店"},{name: "大丸梅田店"},{name: "LUCUA 9階店"},{name: "LUCUA 1100 2階 グランマルシェ店"},{name: "LUCUA 1100 2階 アトリウムガーデン店"},{name: "LUCUA osaka 地下2階店"},{name: "LUCUA osaka 地下2階店"},{name: "梅田 蔦屋書店"}])
+
+
+
 osaka = Store.create(name: "大阪府")
 osaka_1 = osaka.children.create(name: "大阪市北区")
 osaka_1.children.create([{name: "大阪ガーデンシティ店"},{name: "大阪マルビル店"},{name: "エキマルシェ大阪店"},{name: "桜橋プラザビル店"},{name: "中之島三井ビル店"},{name: "グランフロント大阪店"},{name: "LINKS UMEDA 地下1階店"},{name: "LINKS UMEDA 2階店"},{name: "LINKS UMEDA 8階店"},{name: "ちゃやまちアプローズタワー店"},{name: "NU茶屋町プラス店"},{name: "TSUTAYA 梅田 MeRISE店"},{name: "梅田ＨＥＰ ＦＩＶＥ店"},{name: "梅田エスト店"},{name: "阪急サン広場地下通り店"},{name: "大丸梅田店"},{name: "LUCUA 9階店"},{name: "LUCUA 1100 2階 グランマルシェ店"},{name: "LUCUA 1100 2階 アトリウムガーデン店"},{name: "LUCUA osaka 地下2階店"},{name: "LUCUA osaka 地下2階店"},{name: "梅田 蔦屋書店"}])
@@ -121,13 +133,25 @@ nara_5.children.create([{name: "大和高田店"}])
 nara_6 = nara.children.create(name: "北葛城郡")
 nara_6.children.create([{name: "奈良西大和ニュータウン店"}])
 
-wakayama = Store.create(name: "和歌山県")
-wakayama_1 = wakayama .children.create(name: "和歌山市")
-wakayama_1.children.create([{name: "蔦屋書店 和歌山市民図書館店"},{name: "和歌山昭和通り店"},{name: "ガーデンパーク和歌山店"},{name: "イオンモール和歌山店"},{name: "和歌山パームシティ店"},{name: "和歌山県立医科大学附属病院店"},{name: "TSUTAYA 和歌山高松店"}])
-wakayama_2 = wakayama.children.create(name: "海南市")
-wakayama_2.children.create([{name: "海南nobinos店"}])
-wakayama_3 = wakayama.children.create(name: "岩出市")
-wakayama_3.children.create([{name: "和歌山岩出店"}])
+shiga = Store.create(name: "滋賀県")
+shiga_1 = shiga.children.create(name: "大津市")
+shiga_1.children.create([{name: "ブランチ大津京店"},{name: "ビエラ大津店"}])
+shiga_2 = shiga.children.create(name: "草津市")
+shiga_2.children.create([{name: "草津駒井沢店"},{name: "草津A・SQUARE店"},{name: "草津国道１号店"},{name: "イオンモール草津店"},{name: "近鉄草津店"}])
+shiga_3 = shiga.children.create(name: "犬上郡")
+shiga_3.children.create([{name: "多賀サービスエリア（上り線）店"},{name: "EXPASA多賀サービスエリア（下り線）店"}])
+shiga_4 = shiga.children.create(name: "蒲生郡")
+shiga_4.children.create([{name: "三井アウトレットパーク滋賀竜王店"}])
+shiga_5 = shiga.children.create(name: " 彦根市")
+shiga_5.children.create([{name: "カインズモール彦根店"}])
+shiga_6 = shiga.children.create(name: "近江八幡市")
+shiga_6.children.create([{name: "近江八幡店"}])
+shiga_7 = shiga.children.create(name: "長浜市 ")
+shiga_7.children.create([{name: "滋賀長浜店"}])
+shiga_8 = shiga.children.create(name: "東近江市")
+shiga_8.children.create([{name: "東近江八日市店"}])
+shiga_9 = shiga.children.create(name: "東近江市")
+shiga_9.children.create([{name: "甲賀市 "}])
 
 
 
