@@ -13,7 +13,46 @@
 
 Hokkaido = Store.create(name: "北海道")
 Hokkaido_1 = Hokkaido.children.create(name: "札幌市中央区")
-Hokkaido_1.children.create([{name: "札幌グランドホテル店"},{name: "大同生命札幌ビル ミレド地下1階店"},{name: "大同生命札幌ビル ミレド2階店"},{name: "桜橋プラザビル店"},{name: "中之島三井ビル店"},{name: "グランフロント大阪店"},{name: "LINKS UMEDA 地下1階店"},{name: "LINKS UMEDA 2階店"},{name: "LINKS UMEDA 8階店"},{name: "ちゃやまちアプローズタワー店"},{name: "NU茶屋町プラス店"},{name: "TSUTAYA 梅田 MeRISE店"},{name: "梅田ＨＥＰ ＦＩＶＥ店"},{name: "梅田エスト店"},{name: "阪急サン広場地下通り店"},{name: "大丸梅田店"},{name: "LUCUA 9階店"},{name: "LUCUA 1100 2階 グランマルシェ店"},{name: "LUCUA 1100 2階 アトリウムガーデン店"},{name: "LUCUA osaka 地下2階店"},{name: "LUCUA osaka 地下2階店"},{name: "梅田 蔦屋書店"}])
+Hokkaido_1.children.create([{name: "札幌グランドホテル店"},{name: "大同生命札幌ビル ミレド地下1階店"},{name: "大同生命札幌ビル ミレド2階店"},{name: "札幌ステラプレイス センター1階店"},{name: "札幌ステラプレイス イースト2階店"},{name: "札幌紀伊國屋書店"},{name: "イオン札幌桑園店"},{name: "札幌南一条店"},{name: "札幌パルコ店"},{name: "札幌医科大学附属病院店"},{name: "札幌円山店"},{name: "札幌旭ケ丘店"},{name: "札幌宮ケ丘店"}])
+Hokkaido_2 = Hokkaido.children.create(name: "札幌市東区")
+Hokkaido_2.children.create([{name: "イオンモール札幌苗穂店"},{name: "札幌環状通東店"},{name: "アリオ札幌店"}])
+Hokkaido_3= Hokkaido.children.create(name: "札幌市西区")
+Hokkaido_3.children.create([{name: "札幌西町店"},{name: "TSUTAYA 札幌琴似店"},{name: "イオンモール札幌発寒店"}])
+Hokkaido_4= Hokkaido.children.create(name: "札幌市清田区")
+Hokkaido_4.children.create([{name: "札幌北野店"},{name: "イオンモール札幌平岡店"}])
+Hokkaido_5= Hokkaido.children.create(name: "札幌市豊平区")
+Hokkaido_5.children.create([{name: "札幌美園店"},{name: "ブランチ札幌月寒店"}])
+Hokkaido_6= Hokkaido.children.create(name: "札幌市北区")
+Hokkaido_6.children.create([{name: "札幌パセオ店"}])
+Hokkaido_7= Hokkaido.children.create(name: "札幌市南区")
+Hokkaido_7.children.create([{name: "札幌石山店"}])
+Hokkaido_7= Hokkaido.children.create(name: "旭川市")
+Hokkaido_7.children.create([{name: "イオンモール旭川駅前店"},{name: "イオンモール旭川西店"},{name: "旭川東光店"},{name: "旭川北彩都店"},{name: "旭川医科大学病院店"}])
+Hokkaido_8= Hokkaido.children.create(name: "函館市")
+Hokkaido_8.children.create([{name: "函館ベイサイド店"},{name: "函館蔦屋書店"},{name: "函館五稜郭駅前店"}])
+Hokkaido_9= Hokkaido.children.create(name: "帯広市 ")
+Hokkaido_9.children.create([{name: "帯広稲田店"},{name: "帯広白樺通り店"}])
+Hokkaido_10= Hokkaido.children.create(name: "北広島市  ")
+Hokkaido_10.children.create([{name: "北広島大曲店"}])
+Hokkaido_11= Hokkaido.children.create(name: "千歳市")
+Hokkaido_11.children.create([{name: "新千歳空港店"}])
+Hokkaido_12= Hokkaido.children.create(name: "江別市")
+Hokkaido_12.children.create([{name: "江別 蔦屋書店"}])
+Hokkaido_13= Hokkaido.children.create(name: "苫小牧市")
+Hokkaido_13.children.create([{name: "イオンモール苫小牧店"}])
+Hokkaido_14= Hokkaido.children.create(name: "苫小牧市")
+Hokkaido_14.children.create([{name: "イオンモール苫小牧店"}])
+Hokkaido_15= Hokkaido.children.create(name: "釧路市")
+Hokkaido_15.children.create([{name: "釧路鶴見橋店"}])
+Hokkaido_16= Hokkaido.children.create(name: "釧路郡")
+Hokkaido_16.children.create([{name: "イオン釧路店"}])
+
+
+
+
+
+
+
 
 
 
