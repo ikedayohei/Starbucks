@@ -300,6 +300,19 @@ wakayama_2.children.create([{name: "海南nobinos店"}])
 wakayama_3 = wakayama.children.create(name: "岩出市")
 wakayama_3.children.create([{name: "和歌山岩出店"}])
 
+tottori = Store.create(name: "")
+shimane_1 = shimane.children.create(name: "松江市")
+shimane_1.children.create([{name: "シャミネ松江店"},{name: "松江玉湯店"}])
+shimane_2 = shimane.children.create(name: "出雲市")
+shimane_2.children.create([{name: "ゆめタウン出雲店"},{name: "出雲大社店"}])
+
+
+shimane = Store.create(name: "島根県")
+shimane_1 = shimane.children.create(name: "松江市")
+shimane_1.children.create([{name: "シャミネ松江店"},{name: "松江玉湯店"}])
+shimane_2 = shimane.children.create(name: "出雲市")
+shimane_2.children.create([{name: "ゆめタウン出雲店"},{name: "出雲大社店"}])
+
 
 
 
