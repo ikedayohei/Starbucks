@@ -101,7 +101,17 @@ akita_2.children.create([{name: "横手店"}])
 akita_3= akita.children.create(name: "大仙市 ")
 akita_3.children.create([{name: "イオンモール大曲店"}])
 
-
+yamagata = Store.create(name: "山形県")
+yamagata_1= yamagata.children.create(name: "山形市")
+yamagata_1.children.create([{name: "山形エスパル店"},{name: "山形馬見ヶ崎店"},{name: "山形県立中央病院店"},{name: "山形白山店"}])
+yamagata_2= yamagata.children.create(name: "米沢市")
+yamagata_2.children.create([{name: "米沢春日店"}])
+yamagata_3= yamagata.children.create(name: "天童市")
+yamagata_3.children.create([{name: "イオンモール天童店"}])
+yamagata_4= yamagata.children.create(name: "鶴岡市")
+yamagata_4.children.create([{name: "鶴岡店"}])
+yamagata_5= yamagata.children.create(name: "酒田市")
+yamagata_5.children.create([{name: "酒田みずほ店"}])
 
 
 
