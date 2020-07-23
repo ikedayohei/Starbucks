@@ -93,8 +93,14 @@ miyagi_10.children.create([{name: "利府街道店"}])
 miyagi_11= miyagi.children.create(name: "富谷市 ")
 miyagi_11.children.create([{name: "イオンモール富谷店"}])
 
-akita = Store.create(name: "宮城県")
-akita_1= akita.children.create(name: "仙台市青葉区")
+akita = Store.create(name: "秋田県")
+akita_1= akita.children.create(name: "秋田市")
+akita_1.children.create([{name: "秋田駅店"},{name: "秋田東通店"},{name: "秋田保戸野学園通り店"},{name: "イオンモール秋田店"},{name: "秋田アルス店"},{name: "秋田大学医学部附属病院店"}])
+akita_2= akita.children.create(name: "横手市")
+akita_2.children.create([{name: "横手店"}])
+akita_3= akita.children.create(name: "大仙市 ")
+akita_3.children.create([{name: "イオンモール大曲店"}])
+
 
 
 
