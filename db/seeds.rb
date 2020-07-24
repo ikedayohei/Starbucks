@@ -348,6 +348,16 @@ hiroshima_9.children.create([{name: "イオンモール広島府中 1階店"},{n
 hiroshima_10 = hiroshima.children.create(name: "東広島市")
 hiroshima_10.children.create([{name: "小谷サービスエリア(上り線)店"}])
 
-
+yamaguchi = Store.create(name: "山口県")
+yamaguchi_1 = yamaguchi.children.create(name: "山口市")
+yamaguchi_1.children.create([{name: "山口市中央公園店"}])
+yamaguchi_2 = yamaguchi.children.create(name: "下関市 ")
+yamaguchi_2.children.create([{name: "下関あるかぽーと店"},{name: "大丸下関店"},{name: "ゆめシティ新下関店"}])
+yamaguchi_3 = yamaguchi.children.create(name: "周南市")
+yamaguchi_3.children.create([{name: "蔦屋書店 周南市立徳山駅前図書館店"}])
+yamaguchi_4 = yamaguchi.children.create(name: "防府市")
+yamaguchi_4.children.create([{name: "防府店"}])
+yamaguchi_5 = yamaguchi.children.create(name: "山陽小野田市")
+yamaguchi_5.children.create([{name: "おのだサンパーク店"}])
 
 
