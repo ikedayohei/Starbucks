@@ -326,11 +326,27 @@ okayama_4.children.create([{name: "倉敷天満屋店"},{name: "イオンモー�
 okayama_5 = okayama.children.create(name: "高梁市")
 okayama_5.children.create([{name: "蔦屋書店 高梁市図書館店"}])
 
-
-
-
-
-
+hiroshima = Store.create(name: "広島県")
+hiroshima_1 = hiroshima.children.create(name: "広島市中区")
+hiroshima_1.children.create([{name: "紙屋町シャレオ店"},{name: "広島パルコ店"},{name: "広島本通り店"},{name: "ＮＨＫ広島ビル店"},{name: "広島三越店"}])
+hiroshima_2 = hiroshima.children.create(name: "広島市安佐南区")
+hiroshima_2.children.create([{name: "イオンモール広島祇園店"}])
+hiroshima_3 = hiroshima.children.create(name: "佐伯区")
+hiroshima_3.children.create([{name: "ジ アウトレット広島店"}])
+hiroshima_4 = hiroshima.children.create(name: "広島市南区")
+hiroshima_4.children.create([{name: "広島段原店"},{name: "ekie広島店"},{name: "広島 蔦屋家電店"},{name: "イオン宇品店"},{name: "ゆめタウン広島店"},{name: "広島大学病院店"}])
+hiroshima_5 = hiroshima.children.create(name: "広島市西区")
+hiroshima_5.children.create([{name: "広島 蔦屋書店"},{name: "広島アルパーク店"}])
+hiroshima_6 = hiroshima.children.create(name: "福山市")
+hiroshima_6.children.create([{name: "JR福山駅店"},{name: "福山多治米店"},{name: "TSUTAYA 駅家店"},{name: "福山ポートプラザ天満屋店"},{name: "TSUTAYA 伊勢丘店"},{name: "福山蔵王店"}])
+hiroshima_7 = hiroshima.children.create(name: "呉市")
+hiroshima_7.children.create([{name: "ゆめタウン呉店"},{name: "呉医療センター店"}])
+hiroshima_8 = hiroshima.children.create(name: "廿日市市")
+hiroshima_8.children.create([{name: "ゆめタウン廿日市店"},{name: "宮島サービスエリア(下り線)店"},{name: "厳島表参道店"}])
+hiroshima_9 = hiroshima.children.create(name: "安芸郡")
+hiroshima_9.children.create([{name: "イオンモール広島府中 1階店"},{name: "イオンモール広島府中 3階店"}])
+hiroshima_10 = hiroshima.children.create(name: "東広島市")
+hiroshima_10.children.create([{name: "小谷サービスエリア(上り線)店"}])
 
 
 
