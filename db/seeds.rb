@@ -360,4 +360,8 @@ yamaguchi_4.children.create([{name: "防府店"}])
 yamaguchi_5 = yamaguchi.children.create(name: "山陽小野田市")
 yamaguchi_5.children.create([{name: "おのだサンパーク店"}])
 
-
+tokushima = Store.create(name: "徳島県")
+tokushima_1 = tokushima.children.create(name: "徳島市")
+tokushima_1.children.create([{name: "徳島駅クレメントプラザ店"},{name: "イオンモール徳島店"},{name: "徳島沖浜店"}])
+tokushima_2 = tokushima.children.create(name: "板野郡")
+tokushima_2.children.create([{name: "ゆめタウン徳島店"}])
