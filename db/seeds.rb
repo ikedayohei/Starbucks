@@ -387,3 +387,7 @@ ehime_4 = ehime.children.create(name: "新居浜市")
 ehime_4.children.create([{name: "イオンモール新居浜店"}])
 ehime_5 = ehime.children.create(name: "今治市")
 ehime_5.children.create([{name: "イオンモール今治新都市店"}])
+
+kochi = Store.create(name: "高知県")
+kochi_1 = kochi.children.create(name: "高知市")
+kochi_1.children.create([{name: "イオンモール高知店"},{name: "高知 蔦屋書店"},{name: "高知帯屋町店"},{name: "高知潮江店"},{name: "高知あぞの店"}])
