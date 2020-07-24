@@ -314,8 +314,17 @@ shimane_1.children.create([{name: "シャミネ松江店"},{name: "松江玉湯�
 shimane_2 = shimane.children.create(name: "出雲市")
 shimane_2.children.create([{name: "ゆめタウン出雲店"},{name: "出雲大社店"}])
 
-
-
+okayama = Store.create(name: "岡山県")
+okayama_1 = okayama.children.create(name: "岡山市北区")
+okayama_1.children.create([{name: "岡山一番街店"},{name: "さんすて岡山店"},{name: "岡山大安寺店"},{name: "岡山ロッツ店"},{name: "イオンモール岡山店"},{name: "岡山青江店"},{name: "岡山中仙道店"},{name: "岡山大学病院店"}])
+okayama_2 = okayama.children.create(name: "岡山市南区 ")
+okayama_2.children.create([{name: "岡山シネマタウン岡南店"}])
+okayama_3 = okayama.children.create(name: "岡山市中区  ")
+okayama_3.children.create([{name: "岡山けやき通り店"}])
+okayama_4 = okayama.children.create(name: "倉敷市")
+okayama_4.children.create([{name: "倉敷天満屋店"},{name: "イオンモール倉敷店"},{name: "倉敷中島店"},{name: "三井アウトレットパーク倉敷店"},{name: "倉敷笹沖店"}]}
+okayama_5 = okayama.children.create(name: "高梁市")
+okayama_5.children.create([{name: "蔦屋書店 高梁市図書館店"}])
 
 
 
