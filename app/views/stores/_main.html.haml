@@ -6,9 +6,10 @@
           .main__contents__store__image
             = image_tag 'sample1.jpeg', alt: '', height: '', width: '', class: ''
         .main__contents__store__name
-          Starbucks1
-        .main__contents__store__outlet
-          コンセント：◯
+          -@reviews.each do|review|
+            =review.plag.name
+            .main__contents__store__outlet
+              =review.point.name
       .main__contents__store--2.store__info
         .main__contents__store__imagebox
           .main__contents__store__image

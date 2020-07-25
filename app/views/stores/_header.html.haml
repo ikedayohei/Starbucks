@@ -13,6 +13,6 @@
       .header__loginbox
         = link_to "ログイン", new_user_session_path, class: "header__userbox__text"
   .exhibition
-    = link_to "#", data: {"turbolinks" => false}  do
+    = link_to new_review_path, data: {"turbolinks" => false}  do
       %span.exhibition__text 投稿する
       = image_tag asset_path("coffee-2-128.png"), class: "exhibition__btn"
