@@ -144,7 +144,17 @@ toyama_2.children.create([,{name: "イオンモール高岡店"},{name: "イオ�
 toyama_3= toyama.children.create(name: "小矢部市")
 toyama_3.children.create([,{name: "三井アウトレットパーク北陸小矢部店"}])
 
-
+ishikawa = Store.create(name: "石川県")
+ishikawa_1= ishikawa.children.create(name: "金沢市")
+ishikawa_1.children.create([{name: "金沢フォーラス店"},{name: "金沢フォーラス6Fクーゴ店"},{name: "金沢百番街Rinto店"}{name: "香林坊東急スクエア店"},{name: "金沢鞍月店"},{name: "武蔵ヶ辻めいてつエムザ店"},{name: "金沢大桑店"}])
+ishikawa_2= ishikawa.children.create(name: "野々市市")
+ishikawa_2.children.create([{name: "金沢野々市店"}])
+ishikawa_3= ishikawa.children.create(name: "小松市 ")
+ishikawa_3.children.create([{name: "イオンモール新小松店"}])
+ishikawa_4= ishikawa.children.create(name: "白山市")
+ishikawa_4.children.create([{name: "フェアモール松任店"}])
+ishikawa_5= ishikawa.children.create(name: "かほく市")
+ishikawa_5.children.create([{name: "イオンモールかほく店"}])
 
 shiga = Store.create(name: "滋賀県")
 shiga_1 = shiga.children.create(name: "大津市")
