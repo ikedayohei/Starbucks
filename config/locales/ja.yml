@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      review: レビュー 
+    attributes:
+      review:
+        plag_id: コンセント
+        visit: 日付
+        congestion_id: 混雑
+        point_id: 評価

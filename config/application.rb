@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Starbucks
   class Application < Rails::Application
+    config.i18n.default_locale = :ja
     config.load_defaults 5.2
     config.generators do |g|
       g.stylesheets false
