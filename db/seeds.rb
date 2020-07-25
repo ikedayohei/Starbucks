@@ -136,6 +136,15 @@ niigata_8.children.create([{name: "三条東新保店"}])
 niigata_9= niigata.children.create(name: "新発田市")
 niigata_9.children.create([{name: "イオンモール新発田店"}])
 
+toyama = Store.create(name: "富山県")
+toyama_1= toyama.children.create(name: "富山市")
+toyama_1.children.create([{name: "マリエとやま店"},{name: "富山総曲輪フェリオ店"},{name: "富山環水公園店"}{name: "富山藤の木店"},{name: "富山ファボーレ店"},{name: "富山けやき通り店"}])
+toyama_2= toyama.children.create(name: "高岡市")
+toyama_2.children.create([,{name: "イオンモール高岡店"},{name: "イオンモール高岡 2階 セントラルコート店"}])
+toyama_3= toyama.children.create(name: "小矢部市")
+toyama_3.children.create([,{name: "三井アウトレットパーク北陸小矢部店"}])
+
+
 
 shiga = Store.create(name: "滋賀県")
 shiga_1 = shiga.children.create(name: "大津市")
