@@ -144,6 +144,18 @@ toyama_2.children.create([,{name: "イオンモール高岡店"},{name: "イオ�
 toyama_3= toyama.children.create(name: "小矢部市")
 toyama_3.children.create([,{name: "三井アウトレットパーク北陸小矢部店"}])
 
+fukui = Store.create(name: "福井県")
+fukui_1= fukui.children.create(name: "福井市")
+fukui_1.children.create([{name: "福井二の宮 藤島通り店"},{name: "フェアモール福井店"},{name: "福井花堂店"}{name: "福井西環状 やしろ店"},{name: "福井県済生会病院店"}])
+fukui_2= fukui.children.create(name: " 越前市")
+fukui_2.children.create([{name: "武生中央公園店"}])
+fukui_3= fukui.children.create(name: "南条郡")
+fukui_3.children.create([{name: "南条サービスエリア（上り線）店"}])
+fukui_4= fukui.children.create(name: "坂井市")
+fukui_4.children.create([{name: "福井春江店"}])
+
+
+
 ishikawa = Store.create(name: "石川県")
 ishikawa_1= ishikawa.children.create(name: "金沢市")
 ishikawa_1.children.create([{name: "金沢フォーラス店"},{name: "金沢フォーラス6Fクーゴ店"},{name: "金沢百番街Rinto店"}{name: "香林坊東急スクエア店"},{name: "金沢鞍月店"},{name: "武蔵ヶ辻めいてつエムザ店"},{name: "金沢大桑店"}])
