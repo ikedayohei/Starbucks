@@ -4,5 +4,6 @@ class Review < ApplicationRecord
   belongs_to_active_hash :plag
   belongs_to_active_hash :congestion
   belongs_to_active_hash :point
+  mount_uploader :image, ImageUploader
   
 end
