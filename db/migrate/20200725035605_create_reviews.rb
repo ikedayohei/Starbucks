@@ -11,6 +11,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :plag_id
       t.integer :point_id
       t.integer :store_id
+      t.string :image
 
       t.timestamps
     end

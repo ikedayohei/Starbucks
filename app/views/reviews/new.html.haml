@@ -7,7 +7,8 @@
     
     =f.label :画像, class:"review-main__review-form__review-label"
     =f.label :必須 ,class:"review-main__review-form__review-label__need"
-    %P{class:"review-main__review-form__review-text"} 最大5枚までアップロードできます
+    =f.file_field :image, class: "hidden-field"
+    %P{class:"review-main__review-form__review-text"} 
    
    .review-main__review-form__review-item-name
     =f.label :日付, class:"review-main__review-form__review-label" 
