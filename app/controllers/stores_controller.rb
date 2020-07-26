@@ -2,6 +2,7 @@ class StoresController < ApplicationController
   before_action :authenticate_user!,  except:[:index]
 
   def index
+    @reviews = Review.all
     @parents = Store.where(ancestry: nil)
     @children = Store.where(store_id: "58")
     respond_to do |format|

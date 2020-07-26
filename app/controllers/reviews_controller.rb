@@ -1,8 +1,6 @@
 class ReviewsController < ApplicationController
   def new
     @reviews = Review.new
-    render "reviews/new"
-
   end
 
   def create
