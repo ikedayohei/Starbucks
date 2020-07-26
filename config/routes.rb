@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resources :stores do
     collection do
       get 'search'
-    end
+  end
   resources :reviews do
   end
+ end
 end
