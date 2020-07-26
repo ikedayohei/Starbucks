@@ -186,7 +186,7 @@ gunma_7.children.create([{name: "館林朝日町店"}])
 gunma_8= gunma.children.create(name: "安中市")
 gunma_8.children.create([{name: "横川サービスエリア(上り線)店"}])
 
-saitama = Store.create(name: "埼玉県県")
+saitama = Store.create(name: "埼玉県")
 saitama_1= saitama.children.create(name: "さいたま市大宮区")
 saitama_1.children.create([{name: "コクーンシティ さいたま新都心店"},{name: "ルミネ大宮 LUMINE2店"},{name: "ルミネ大宮 LUMINE1店"},{name: "大宮西口店"},{name: "大宮マルイ店"}])
 saitama_2= saitama.children.create(name: "さいたま市中央区")
