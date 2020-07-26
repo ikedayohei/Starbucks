@@ -1,0 +1,337 @@
+$six:600px;
+$fiv:50px;
+$for:40px;
+$ten:10px;
+
+* {
+  box-sizing: border-box;
+}
+
+.review-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(5, 58, 33);
+  &__review-header {
+   width: 100%;
+   height: 150px;
+   background-color: rgb(5, 58, 33);
+   text-align: center;
+  }
+  &__review-logo { 
+   height: 60px;
+   width: 130px;
+   margin-top: $fiv;
+   margin-bottom: 20px;
+  }
+  &__review-form {
+   height: 1500px;
+   width: 700px;
+   background-color: white;
+   margin: 0 auto;
+  &__review-label {
+   margin-top: 20px;
+   margin-left: 50px;
+   display: inline-block;
+   &__need {
+    background-color: rgb(235, 41, 15);
+    color: white;
+    left: 40px;
+    }
+  }
+  &__review-text{
+   width: 300px;
+   margin-left: 50px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+  }
+  &__review-item-image{
+   width: 100%;
+   &__box {
+    display: block;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    .prev-content {
+     display: flex;
+     .preview-box {
+      height: 162px;
+      width: 112px;
+      margin: 0 15px 10px 0;
+      .upper-box {
+        img{
+        width: 112px;
+        height: 112px;
+        }
+       }
+      .lower-box {
+        display: flex;
+        text-align: center;
+        .delete-box {
+         color: #00b0ff;
+         width: 100%;
+         height: 50px;
+         line-height: 50px;
+         border: 1px solid #eee;
+         background: #f5f5f5;
+         cursor: pointer;
+         }
+       }
+      }
+     }
+     .label-content{
+      margin-bottom: 10px;
+      width: 620px;
+  
+      .label-box {
+        display: block;
+        border: 1px dashed #ccc;
+        position: relative;
+        background: #f5f5f5;
+        width: 100%;
+        height: 162px;
+        cursor: pointer;
+        &__text-visible {
+          position: absolute;
+          top: 50%;
+          left: 16px;
+          right: 16px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 1.5;
+          font-weight: bold;
+          -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          pointer-events: none;
+          white-space: pre-wrap;
+          word-wrap: break-word;
+        }
+      }
+    }
+    .hidden-content {
+      display: none;
+     .hidden-field {
+     }
+    }
+   }
+  }
+  &__review-item-name {
+   width: 100%;
+   height: 110px;
+   margin-top: 30px;
+   &__form {
+    width: $six;
+    height: $fiv;
+    margin-top: $ten;
+    margin-left: 50px;
+   }
+  }    
+  &__review-item-explanation {
+   width: 100%;
+   height: 300px;
+   margin-top: 10px;
+   &__form {
+    width: $six;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: $ten;
+   }
+  }
+  .listing-product-detail__category {
+   width: 100%;
+   height: 150px;
+   .listing-select-wrapper {
+    &__box--select{
+      width: $six;
+      height: $fiv;
+      margin-top: $ten;
+      margin-left: 50px;
+    }
+   }
+   &__detail{
+    height: 10px;
+    width: 300px;
+    margin-left: 60px;
+    margin-top: 40px;
+    color: gray;
+   }
+  }
+  
+ &__review-item-size{
+  width: 100%;
+  height: 150px;
+  &__form {
+   width: $six;
+   height: $fiv;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ }
+ &__review-item-brand {
+  width: 100%;
+  height: 150px;
+ .review-label {
+  margin-top: $fiv;
+  margin-left: $for;
+  display: inline-block;
+  &__free {
+   background-color: gray;
+   color: white;
+   left: $for;
+  }
+  }   
+  &__form {
+    width: $six;
+    height: $fiv;
+    margin-left: 50px;
+    margin-top: $ten;
+  }
+ }
+ &__status  {
+  width: 100%;
+  height: 150px;
+  &__form {
+   width: $six;
+   height: $fiv;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ }
+ &__delivery_charges{
+  width: 100%;
+  height: 150px;
+  &__form {
+   width: $six;
+   height: $fiv;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ }
+ &__delivery_ways {
+  width: 100%;
+  height: 150px;
+  &__form {
+   width: $six;
+   height: $fiv;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ }
+ &__delivery_date {
+  width: 100%;
+  height: 150px;
+  &__form {
+   width: $six;
+   height: $fiv;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ } 
+ &__price {
+  width: 100%;
+  height: 50px;
+  &__area{
+   height: 15px;
+   width: 300px;
+   margin-left: 50px;
+   margin-top: 30px;
+   color: gray;
+   font-size: 15px;
+  }
+  &__box {
+    width: 100%;
+    height: 90px;
+  &__holder{
+   margin-left: 50px;
+   margin-top: 20px;
+   height: 30px;
+   width: 200px;
+   display: flex;
+  }
+  &__form {
+    width: 200px;
+    height: 30px;
+   }
+  }
+ }
+ &__profit {
+    width: 100%;
+    height: 80px;
+  &__form {
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+  }
+  &__sell{
+   width: 200px;
+   height: 30px;
+   margin-left: 50px;
+   margin-top: $ten;
+  }
+ }
+ &__submit {
+  width: 100%;
+  height: 100px;
+  &__form {
+   background-color: rgb(30, 153, 71);
+   color: white;
+   width: 380px;
+   height:$fiv;
+   margin-top: $fiv;
+   margin-left: 150px;
+   font-size: 20px;
+   line-height: 50px;
+   cursor: pointer;
+   font-size: 2.5rem;
+   &:hover {
+    background-color:rgba(0, 0, 0, 0.712);
+   }
+  }
+ }
+ &__back {
+  margin-top: 20px;
+  margin-left: 310px;
+  font-size: 12px;
+  color: blue;
+  a {
+    text-decoration: none;
+  }
+ }
+ &__rool {
+  color: darkgray;
+  font-size: 5px;
+  margin-top: $for;
+  margin-left: 100px;
+ }
+}
+&__sell-footer {
+ height: 200px;
+ width: 100%;
+ background-color: rgb(245, 239, 239);
+ position: relative;
+ text-align: center;
+ ul {
+     padding-top: 30px;
+     background-color: rgb(245, 239, 239);
+   }
+ li {
+     list-style: none;
+     font-size: 11px;
+     display: inline;
+     margin-left: 5px;
+  }
+  &__footer-logo {
+   height: 60px;
+   width: 130px;
+   position: absolute;
+   background-color: rgb(89, 212, 212);
+   margin-top:$fiv;
+   left: 620px;
+  } 
+ } 
+ .field_with_errors {
+  background-color: #fcc;
+  padding: 2px;
+ }
+}

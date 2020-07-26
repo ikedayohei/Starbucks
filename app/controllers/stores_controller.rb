@@ -35,6 +35,7 @@ class StoresController < ApplicationController
     @q = Store.ransack(params[:q])
     @search_store = Store.ransack(params[:q]) 
     @result = @search_store.result.page(params[:page])
+    @reviews = Review.all
   end
 
   def get_category_children

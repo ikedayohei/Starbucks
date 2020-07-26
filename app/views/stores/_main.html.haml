@@ -1,38 +1,15 @@
 .main
   .main__contents
     .main__contents__box
-      .main__contents__store--1.store__info1
-        .main__contents__store__imagebox
-          .main__contents__store__image
-            = image_tag 'sample1.jpeg', alt: '', height: '', width: '', class: ''
-        .main__contents__store__name
-          Starbucks1
-        .main__contents__store__outlet
-          コンセント：◯
-      .main__contents__store--2.store__info
-        .main__contents__store__imagebox
-          .main__contents__store__image
+      -@reviews.each do|review|
+        .main__contents__box__store
+        
+          .main__contents__store__imagebox
             .main__contents__store__image
-              = image_tag 'sample1.jpeg', alt: '', height: '', width: '', class: ''
-        .main__contents__store__name
-          Starbucks2
-        .main__contents__store__outlet
-          コンセント：×
-      .main__contents__store--3.store__info
-        .main__contents__store__imagebox
-          .main__contents__store__image
-            .main__contents__store__image
-              = image_tag 'sample1.jpeg', alt: '', height: '', width: '', class: ''
-        .main__contents__store__name
-          Starbucks3
-        .main__contents__store__outlet
-          コンセント：◯
-      .main__contents__store--4.store__info
-        .main__contents__store__imagebox
-          .main__contents__store__image
-            .main__contents__store__image
-              = image_tag 'sample1.jpeg', alt: '', height: '', width: '', class: ''
-        .main__contents__store__name
-          Starbucks4
-        .main__contents__store__outlet
-          コンセント：◯
+              =link_to review_path(review.id),data:false do
+                -if review.image.present?
+                  =image_tag review.image.url, class:'main__contents__store__image' 
+                .main__contents__box__name
+                  =review.plag.name
+                .main__contents__box__outlet
+                  =review.point.name
