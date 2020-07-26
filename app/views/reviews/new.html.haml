@@ -6,7 +6,7 @@
    .review-main__review-form__review-item-image
     = render 'layouts/error_messages', model: f.object
     =f.label :画像, class:"review-main__review-form__review-label"
-    =f.label :必須 ,class:"review-main__review-form__review-label__need"
+    =f.label :任意, class:"review-label__free"
     =f.file_field :image, class: "hidden-field"
     %P{class:"review-main__review-form__review-text"} 
    
@@ -30,7 +30,7 @@
    .review-main__review-form__review-item-brand
     = f.fields_for :brand do |brand|
      =f.label :評価 ,class:"review-main__review-form__review-label" 
-     =f.label :任意, class:"review-label__free"
+     =f.label :必須,  class:"review-main__review-form__review-label__need"
      = f.collection_select :point_id, Point.all, :id, :name, {prompt: "選択してください"},class: "review-main__review-form__status__form"
    .review-main__review-form__status
     =f.label :コメント,class:"review-main__review-form__review-label"
