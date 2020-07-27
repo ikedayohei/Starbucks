@@ -1,0 +1,12 @@
+.menubar
+ .menubar__menu
+  MENU
+ .menubar__mypage
+  - if user_signed_in?
+   =link_to "マイページ", user_path(current_user)
+  - else 
+   =link_to "新規登録", new_user_registration_path
+   =link_to "ログイン", new_user_session_path
+ .menubar__search
+  = link_to "店舗検索", search_stores_path
+ 
