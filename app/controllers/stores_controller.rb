@@ -3,6 +3,10 @@ class StoresController < ApplicationController
 
   def index
     @reviews = Review.all
+    @store_parent_array = ["---"]
+    Store.where(ancestry: nil).each do |parent|
+    @store_parent_array << parent.name
+    end
   end
 
   def new

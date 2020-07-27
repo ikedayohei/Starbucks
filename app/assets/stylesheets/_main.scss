@@ -29,7 +29,12 @@
   border: 3px solid #00704a;
   margin-left: 20px;
   display: flex;
-
+  }
+  &__name {
+    color: black;
+  }
+  &__outlet{
+    color: black;
   }
 }
 
