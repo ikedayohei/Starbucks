@@ -3,12 +3,6 @@ class StoresController < ApplicationController
 
   def index
     @reviews = Review.all
-    @parents = Store.where(ancestry: nil)
-    @children = Store.where(store_id: "58")
-    respond_to do |format|
-      format.html
-      format.json
-    end
   end
 
   def new
@@ -24,7 +18,6 @@ class StoresController < ApplicationController
       format.html
       format.json do
         @children = Store.find(params[:parent_id]).children
-        #親ボックスのidから子ボックスのidの配列を作成してインスタンス変数で定義
       end
     end
     @store_parent_array = ["---"]
