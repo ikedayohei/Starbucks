@@ -7,11 +7,12 @@
  .review-main__review-form
   =form_for @reviews do |f|
    .form{id: 'formId'} 
+    = render 'layouts/error_messages', model: f.object
     = f.label :店舗, class:"review-main__review-form__review-label"
     = f.label :必須 ,class:"review-main__review-form__review-label__need"
     = f.collection_select :store_id, Store.all.where(ancestry: nil), :id, :name,{prompt: "選択してください"}, name: '',id: "parent-form",selected:true
    .review-main__review-form__review-item-image
-    = render 'layouts/error_messages', model: f.object
+    
     =f.label :画像, class:"review-main__review-form__review-label"
     =f.label :必須 ,class:"review-main__review-form__review-label__need"
     =f.file_field :image, class: "hidden-field"
