@@ -28,12 +28,14 @@ class StoresController < ApplicationController
      Store.where(ancestry: nil).each do |parent|
              @store_parent_array << parent.name
      end
-    @parents = Store.where(ancestry: nil)
-    @store = Store.search(params[:search])
-    @q = Store.ransack(params[:q])
-    @search_store = Store.ransack(params[:q]) 
-    @result = @search_store.result.page(params[:page])
-    @reviews = Review.all
+    @reviews = Review.search(params[:search])
+    @search = params[:search]
+    @q = Review.ransack(params[:q])
+    @reviews = Review.search(params[:search])
+    @search = params[:search]
+    @q = Review.ransack(params[:q])
+    @search_review = Review.ransack(params[:q]) 
+    @result = @search_review.result.page(params[:page])
   end
 
   def get_category_children
