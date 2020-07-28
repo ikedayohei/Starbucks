@@ -2,3 +2,7 @@
   .footer__menu
   .footer__help
   .footer__text © TECH CAMP 67c
+  .exhibition
+    = link_to new_review_path, data: {"turbolinks" => false}  do
+      %span.exhibition__text 投稿する
+      = image_tag asset_path("coffee-2-128.png"), class: "exhibition__btn"

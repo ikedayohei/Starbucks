@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', ()=> {
     
     if (parentValue != "選択してください"){
     $.ajax({
-      url: '/stores/search',
+      url: '/reviews/new',
       type: "GET",
       data: {
         parent_id: parentValue // 親ボックスの値をparent_idという変数にする。
@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', ()=> {
     let parentValue = document.getElementById("child-form").value;
     if(parentValue != "選択してください"){
     $.ajax({
-      url: '/stores/search',
+      url: '/reviews/new',
       type: "GET",
       data: {
         parent_id: parentValue // 親ボックスの値をparent_idという変数にする。

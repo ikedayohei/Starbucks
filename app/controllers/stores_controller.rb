@@ -2,12 +2,10 @@ class StoresController < ApplicationController
   before_action :authenticate_user!,  except:[:index]
 
   def index
-    @reviews = Review.all
-    @parents = Store.where(ancestry: nil)
-    @children = Store.where(store_id: "58")
-    respond_to do |format|
-      format.html
-      format.json
+    @reviews = Review.includes(:user).order('created_at DESC').page(params[:page]).per(8)
+    @store_parent_array = ["---"]
+    Store.where(ancestry: nil).each do |parent|
+    @store_parent_array << parent.name
     end
   end
 
@@ -24,19 +22,16 @@ class StoresController < ApplicationController
       format.html
       format.json do
         @children = Store.find(params[:parent_id]).children
-        #親ボックスのidから子ボックスのidの配列を作成してインスタンス変数で定義
       end
     end
     @store_parent_array = ["---"]
      Store.where(ancestry: nil).each do |parent|
              @store_parent_array << parent.name
      end
-    @parents = Store.where(ancestry: nil)
-    @store = Store.search(params[:search])
-    @q = Store.ransack(params[:q])
-    @search_store = Store.ransack(params[:q]) 
-    @result = @search_store.result.page(params[:page])
-    @reviews = Review.all
+    @reviews = Review.search(params[:search])
+    @q = Review.ransack(params[:q])
+    @search_review = Review.ransack(params[:q]) 
+    @result = @search_review.result.page(params[:page])
   end
 
   def get_category_children
