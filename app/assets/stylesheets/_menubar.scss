@@ -3,6 +3,24 @@
   width: 100%;
   display: flex;
   margin-top: 3px;
+  &__home {
+    color: white;
+    width: 300px;
+    line-height: 80px;
+    font-size: 30px;
+    text-align: center;
+    background: #333;
+    margin-left: 3px;
+    margin-right: 1px;
+    &:hover {
+      background-color: #00704a;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
   &__menu {
   color: white;
   width: 300px;
