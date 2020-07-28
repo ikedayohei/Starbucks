@@ -4,7 +4,7 @@
   .search-main__left
     =search_form_for(@q, url: search_stores_path) do |f|
       .search-main__left__search_sort
-        =f.select( :sorts, { '並び替え': 'id desc', "数量の少ない順": "quantity desc","数量の多い順": "quantity asc","単価の安い順": "sell_price asc", "単価の高い順": "sell_price desc", "利益の低い順": "profit desc","利益の多い順": "profit desc","締め切り順": "deadline asc", "入手順": "get desc", "SOPの早い順": "start desc"}, {onchandge: "this.form.submit()"},class: "search-main__left__search_sort__box")
+        =f.select( :sorts, { '並び替え': 'id desc', "レビューの少ない順": "review desc"}, {onchandge: "this.form.submit()"},class: "search-main__left__search_sort__box")
       .search-main__left__search_form
         .search-main__left__search_form__title
           詳細検索

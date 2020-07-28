@@ -19,7 +19,7 @@
   }
   &__search_form {
     border: solid 1px;
-    height: 700px;
+    height: 300px;
     width:350px;
     margin-top: 30px;
     background: rgb(245, 245, 245);
@@ -120,7 +120,7 @@
       margin-left: 25px;
       .item-image{
         margin-right: 20px;
-        margin-bottom: 60px;
+        margin-top: 20px;
       }
       &__item-box {
         position: relative;
