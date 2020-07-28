@@ -1,9 +1,10 @@
 .main
   .main__contents
-    =paginate(@reviews)
+    
     .main__contents__title
       新規レビュー
-      
+    .main__contents__paginate
+      =paginate(@reviews)
     .main__contents__box
       -@reviews.each do|review|
         .main__contents__box__store
