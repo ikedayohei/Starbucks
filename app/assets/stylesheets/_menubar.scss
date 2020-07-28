@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   margin-top: 3px;
+  margin-bottom: 20px;
   &__home {
     color: white;
     width: 300px;
@@ -13,7 +14,7 @@
     margin-left: 3px;
     margin-right: 1px;
     &:hover {
-      background-color: #00704a;
+      background-color:#c6893f;
       color: black;
     }
     a{
@@ -49,7 +50,7 @@
   margin-right: 3px;
   margin-left: 3px;
   &:hover {
-    background-color: #00704a;;
+    background-color:#c6893f;
     color: black;
   }
   a{

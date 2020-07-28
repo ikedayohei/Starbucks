@@ -3,14 +3,28 @@
 }
 
 .main{
-  height: calc(100vh - 200px);
   width: 100%;
+  flex-direction: column;
   &__contents{
+    height: 1000px;
+    &__title {
+    height: 70px;
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#c6893f;
+    color: white;
+    width: 330px;
+    margin: 0 auto;
+    border-radius: 3px;
+    }
     &__box{
-      width: 1250px;
-    
+      width: 100%;
       padding-top: 50px;
       display: flex;
+      flex-wrap:wrap;
+      text-decoration: none;
+      padding: 30px;
     }
     &__store__image{
       height: 200px;
@@ -29,6 +43,7 @@
   border: 3px solid #00704a;
   margin-left: 20px;
   display: flex;
+  margin-top: 20px;
   }
   &__name {
     color: black;
@@ -44,4 +59,5 @@
   width: 300px;
   border: 3px solid #00704a;
   display: flex;
+  
 }

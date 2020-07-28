@@ -1,10 +1,15 @@
 .main
   .main__contents
+    =paginate(@reviews)
+    .main__contents__title
+      新規レビュー
+      
     .main__contents__box
       -@reviews.each do|review|
         .main__contents__box__store
         
           .main__contents__store__imagebox
+            
             .main__contents__store__image
               =link_to review_path(review.id),data:false do
                 -if review.image.present?

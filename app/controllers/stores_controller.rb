@@ -2,7 +2,7 @@ class StoresController < ApplicationController
   before_action :authenticate_user!,  except:[:index]
 
   def index
-    @reviews = Review.all
+    @reviews = Review.includes(:user).order('created_at DESC').page(params[:page]).per(8)
     @store_parent_array = ["---"]
     Store.where(ancestry: nil).each do |parent|
     @store_parent_array << parent.name
@@ -29,10 +29,6 @@ class StoresController < ApplicationController
              @store_parent_array << parent.name
      end
     @reviews = Review.search(params[:search])
-    @search = params[:search]
-    @q = Review.ransack(params[:q])
-    @reviews = Review.search(params[:search])
-    @search = params[:search]
     @q = Review.ransack(params[:q])
     @search_review = Review.ransack(params[:q]) 
     @result = @search_review.result.page(params[:page])
