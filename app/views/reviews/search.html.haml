@@ -2,7 +2,7 @@
 =render "stores/menubar"
 .search-main
   .search-main__left
-    =search_form_for(@q, url: search_stores_path) do |f|
+    =search_form_for(@q, url: search_reviews_path) do |f|
       .search-main__left__search_sort
         =f.select( :sorts, { '並び替え': 'id desc', "レビューの少ない順": "revies desc"}, {onchandge: "this.form.submit()"},class: "search-main__left__search_sort__box")
       .search-main__left__search_form
