@@ -3,10 +3,7 @@ class StoresController < ApplicationController
 
   def index
     @reviews = Review.includes(:user).order('created_at DESC').page(params[:page]).per(8)
-    @store_parent_array = ["---"]
-    Store.where(ancestry: nil).each do |parent|
-    @store_parent_array << parent.name
-    end
+    @stores = Review.includes(:user).where(store_id: "486").page(params[:page]).per(8)
   end
 
   def new
