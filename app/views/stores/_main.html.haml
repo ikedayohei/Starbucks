@@ -28,7 +28,21 @@
     .main__contents__box2
       店舗＜大阪＞
       .main__contents__box2
-        -@store.each do|review|
+        -@stores.each do|review|
+          .main__contents__store__image
+            =link_to review_path(review.id),data:false do
+              -if review.image.present?
+                =image_tag review.image.url, class:'main__contents__store__image' 
+              .main__contents__box__name
+                =review.plag.name
+              .main__contents__box__outlet
+                =review.point.name
+                %br
+                =review.store.root.name
+                %br
+                =review.store.parent.name
+                %br
+                =review.store.name
 
 
 
