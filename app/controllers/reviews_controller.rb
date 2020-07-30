@@ -26,6 +26,22 @@ class ReviewsController < ApplicationController
     @review =Review.find(params[:id])
    end
 
+   def search
+    respond_to do |format|
+      format.html
+      format.json do
+        @children = Store.find(params[:parent_id]).children
+      end
+    end
+    @store_parent_array = ["---"]
+    Store.where(ancestry: nil).each do |parent|
+             @store_parent_array << parent.name
+     end
+    @q = Review.ransack(params[:q])
+    @search_review = Review.ransack(params[:q]) 
+    @result = @search_review.result.page(params[:page])
+  end
+
   private
 
   def review_params
