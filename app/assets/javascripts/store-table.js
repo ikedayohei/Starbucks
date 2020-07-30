@@ -64,7 +64,7 @@ $(document).on('turbolinks:load', ()=> {
     
           let tako = `<option value="">選択してください</option>
           ${opt}`;
-          let h = `<select name="review[store_id]" id="grandchild-form" selected>${tako} </select>`; //colection_selectのとこ
+          let h = `<select name="revie[store_id]" id="grandchild-form" selected>${tako} </select>`; //colection_selectのとこ
           return h
         }
         var html = childrenselect(data);
