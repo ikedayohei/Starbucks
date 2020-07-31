@@ -1,6 +1,5 @@
 .main
   .main__contents
-    
     .main__contents__title
       新規レビュー
     .main__contents__paginate
@@ -25,6 +24,8 @@
                   =review.store.name
     .main__contents__title2
       店舗 大阪 なんばスカイオ 10階店
+    .main__contents__paginate2
+      =paginate(@reviews)
       .main__contents__box2
         -@stores.each do|review|
           .main__contents__box__store2
