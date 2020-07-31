@@ -18,6 +18,17 @@
     margin: 0 auto;
     border-radius: 3px;
     }
+    &__title2 {
+      height: 150px;
+      text-align: center;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color:#c6893f;
+      color: white;
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 3px;
+    }
     &__paginate{
     height: 20px;
     text-align: center;
@@ -41,6 +52,16 @@
       text-decoration: none;
       padding: 30px;
     }
+    &__box2{
+      width: 800px;
+      height: 300px;
+      padding-top: 50px;
+      display: flex;
+      flex-wrap:wrap;
+      text-decoration: none;
+      padding: 30px;
+      background-color: gold;
+    }
     &__store__image{
       height: 200px;
       width: 280px;
@@ -60,6 +81,14 @@
   display: flex;
   margin-top: 20px;
   }
+  &__store2{
+    height: 350px;
+    width: 300px;
+    border: 3px solid #00704a;
+    margin-left: 20px;
+    display: flex;
+    margin-top: 20px;
+  }
   &__name {
     color: black;
   }
@@ -76,7 +105,7 @@
 
 .main__contents__box2{
   display: flex;
-  &__store{
+  &__store2{
   height: 350px;
   width: 300px;
   border: 3px solid #00704a;
@@ -84,10 +113,10 @@
   display: flex;
   margin-top: 20px;
   }
-  &__name {
+  &__name2 {
     color: black;
   }
-  &__outlet{
+  &__outlet2{
     color: black;
   }
   a{

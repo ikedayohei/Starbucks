@@ -3,7 +3,7 @@ class StoresController < ApplicationController
 
   def index
     @reviews = Review.includes(:user).order('created_at DESC').page(params[:page]).per(8)
-    @stores = Review.includes(:user).where(store_id: "1510").page(params[:page]).per(8)
+    @stores = Review.includes(:user).where(store_id: "1550").all.order("created_at DESC").page(params[:page]).per(8)
   end
 
   def new
