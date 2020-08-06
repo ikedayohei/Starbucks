@@ -19,7 +19,7 @@
   }
   &__search_form {
     border: solid 1px;
-    height: 300px;
+    height: 450px;
     width:350px;
     margin-top: 30px;
     background: rgb(245, 245, 245);
@@ -39,9 +39,17 @@
     padding-left: 50px;
     }
     &__congestion-title {
+      margin-top: 80px;
       font-size: 15px;
       padding-left: 50px;
       margin-bottom: 3px;
+    }
+    &__congestion-form {
+      padding-left: 50px;
+      margin-top: 10px;
+      height: 30px;
+      width: 200px;
+      border-radius: 5px;
     }
     .form {
       width: 200px;
