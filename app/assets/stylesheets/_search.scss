@@ -46,10 +46,14 @@
     }
     &__congestion-form {
       padding-left: 50px;
+     
+    }
+    &__congestion-box {
       margin-top: 10px;
-      height: 50px;
+      height: 30px;
       width: 200px;
       border-radius: 5px;
+      border: 1px solid black;
     }
     .form {
       width: 200px;
