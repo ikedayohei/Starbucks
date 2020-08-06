@@ -15,7 +15,7 @@
         
         .search-main__left__search_form__name-title
           混雑具合で検索
-        .search-main__left__search_form__delivery_charge-box1
+        .form
           = f.collection_select :congestion_id_eq, Congestion.all, :id, :name, {prompt: "選択してください"},class: "search-main__left__search_form__delivery_charge-box1__box"
         
         .search-main__left__search_form__btn-box
