@@ -29,6 +29,13 @@ class StoresController < ApplicationController
     @q = Review.ransack(params[:q])
     @search_review = Review.ransack(params[:q]) 
     @result = @search_review.result.page(params[:page])
+    @q = Review.ransack(params[:q]) #ランサックの検索条件を受信する
+    if @q
+      @result = @q.result(distinct: true)  #詳細検索で複数のレコードを所得した際に重複したものを一つにまとめるメソッド
+    else 
+      @result = nil
+    end
+  
   end
 
   def get_category_children
