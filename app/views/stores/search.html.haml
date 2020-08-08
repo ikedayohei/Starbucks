@@ -20,7 +20,8 @@
           コンセントコンセントで検索
         .form
           = f.collection_select :plag_id_eq, Plag.all, :id, :name, {prompt: "選択してください"},class: "search-main__left__search_form__congestion-box"
-        
+        .search-main__left__search_form__visit-title
+          = f.datetime_field :visit_gteq
         .search-main__left__search_form__btn-box
           =f.button "クリア", type: :reset, class:"search-main__left__search_form__btn-box__box"
           =f.submit "完了", class:"search-main__left__search_form__btn-box__submit"
