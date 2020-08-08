@@ -19,7 +19,7 @@
   }
   &__search_form {
     border: solid 1px;
-    height: 450px;
+    height: 550px;
     width:350px;
     margin-top: 30px;
     background: rgb(245, 245, 245);
@@ -51,10 +51,8 @@
       margin-bottom: 3px;
     }
     &__visit-title {
-      margin-top: 15px;
       font-size: 15px;
       padding-left: 50px;
-      margin-bottom: 3px;
     }
     &__congestion-form {
       padding-left: 50px;
@@ -68,7 +66,8 @@
       border: 1px solid black;
     }
     &__visit-box {
-      margin-top: 10px;
+      margin-top: 1px;
+      margin-bottom: 5px;
       height: 30px;
       width: 200px;
       border-radius: 5px;
