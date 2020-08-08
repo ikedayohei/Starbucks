@@ -25,6 +25,10 @@ class StoresController < ApplicationController
      Store.where(ancestry: nil).each do |parent|
              @store_parent_array << parent.name
      end
+     search_options = {
+      created_after: params[:created_after]
+      created_before: params[:created_before]
+    }
     @reviews = Review.search(params[:search])
     @q = Review.ransack(params[:q])
     @search_review = Review.ransack(params[:q]) 
