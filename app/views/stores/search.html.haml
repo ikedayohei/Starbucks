@@ -11,13 +11,20 @@
         .search-main__left__search_form__name-title
           店舗で検索
         .form{id: 'formId'} 
-          = f.collection_select :store_id_eq, Store.all.where(ancestry: nil), :id, :name,{prompt: "選択してください"}, name: '',id: "parent-form",selected:true
-        
-        .search-main__left__search_form__name-title
+          = f.collection_select :store_id_eq, Store.all.where(ancestry: nil).limit(2077), :id, :name,{prompt: "選択してください"}, name: '',id: "parent-form",selected:true
+        .search-main__left__search_form__congestion-title
           混雑具合で検索
-        .search-main__left__search_form__delivery_charge-box1
-          = f.collection_select :congestion_id_eq, Congestion.all, :id, :name, {prompt: "選択してください"},class: "search-main__left__search_form__delivery_charge-box1__box"
-        
+        .search-main__left__search_form__congestion-form
+          = f.collection_select :congestion_id_eq, Congestion.all, :id, :name, {prompt: "選択してください"},class: "search-main__left__search_form__congestion-box"
+        .search-main__left__search_form__plage-title
+          コンセントコンセントで検索
+        .form
+          = f.collection_select :plag_id_eq, Plag.all, :id, :name, {prompt: "選択してください"},class: "search-main__left__search_form__congestion-box"
+        .search-main__left__search_form__visit-title
+          訪問日
+        .search-main__left__search_form__visit-title
+          = f.datetime_field :visit_gteq, class: "search-main__left__search_form__visit-box"
+          = f.datetime_field :visit_lteq, class: "search-main__left__search_form__visit-box"
         .search-main__left__search_form__btn-box
           =f.button "クリア", type: :reset, class:"search-main__left__search_form__btn-box__box"
           =f.submit "完了", class:"search-main__left__search_form__btn-box__submit"
@@ -36,4 +43,4 @@
               =store.store.name     
       -else
         .search-main__right__non
-          ="お探しの商品はございません"
+          ="お探しのレビューはございません"
