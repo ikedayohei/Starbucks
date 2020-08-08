@@ -23,7 +23,7 @@
         .search-main__left__search_form__visit-title
           訪問日
         .search-main__left__search_form__visit-title
-          = f.datetime_field :visit_gteq
+          = f.datetime_field :visit_gteq, class: "search-main__left__search_form__visit-box"
         .search-main__left__search_form__btn-box
           =f.button "クリア", type: :reset, class:"search-main__left__search_form__btn-box__box"
           =f.submit "完了", class:"search-main__left__search_form__btn-box__submit"
