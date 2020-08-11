@@ -5,8 +5,10 @@
 .footer{
   height: 50px;
   width: 100%;
+  margin-top: auto;
   background-color: black;
   position: relative;
+  bottom: 0;
   &__text{
     width: 100%;
     color: #ffffff;

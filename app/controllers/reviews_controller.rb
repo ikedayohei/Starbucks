@@ -1,8 +1,16 @@
 class ReviewsController < ApplicationController
   def new
     @reviews = Review.new
-    render "reviews/new"
-
+    respond_to do |format|
+      format.html
+      format.json do
+        @children = Store.find(params[:parent_id]).children
+      end
+    end
+    @store_parent_array = ["---"]
+    Store.where(ancestry: nil).each do |parent|
+    @store_parent_array << parent.name
+    end
   end
 
   def create

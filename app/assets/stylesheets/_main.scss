@@ -3,15 +3,63 @@
 }
 
 .main{
-  height: calc(100vh - 200px);
   width: 100%;
-  background-color: #f8f8f8;
+  flex-direction: column;
   &__contents{
+    height: 1800px;
+    &__title {
+    height: 70px;
+    text-align: center;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#c6893f;
+    color: white;
+    width: 330px;
+    margin: 0 auto;
+    border-radius: 3px;
+    }
+    &__title2 {
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#c6893f;
+    color: white;
+    width: 330px;
+    margin: 0 auto;
+    border-radius: 3px;
+    line-height: 70px;
+    }
+    &__paginate{
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 3px;
+    text-align: center;
+    }
+    a{
+      color: blue;
+    }
     &__box{
-      width: 1250px;
-    
+      width: 1350px;
       padding-top: 50px;
       display: flex;
+      flex-wrap:wrap;
+      text-decoration: none;
+      padding: 30px;
+    }
+    &__box2{
+      width: 100%;
+      padding-top: 50px;
+      display: flex;
+      flex-wrap:wrap;
+      text-decoration: none;
+      padding: 30px;
     }
     &__store__image{
       height: 200px;
@@ -20,18 +68,68 @@
       margin-top: 3px;
       margin-right: 7px;
     }
+    &__store__image2{
+      height: 200px;
+      width: 280px;
+      margin-left: 3px;
+      margin-top: 3px;
+    }
   }
 }
 
 .main__contents__box{
   display: flex;
   &__store{
-  height: 300px;
+  height: 350px;
   width: 300px;
   border: 3px solid #00704a;
   margin-left: 20px;
   display: flex;
+  margin-top: 20px;
+  }
+  &__store2{
+    height: 350px;
+    width: 300px;
+    border: 3px solid #00704a;
+    margin-left: 20px;
+    display: flex;
+    margin-top: 20px;
+  }
+  &__name {
+    color: black;
+  }
+  &__outlet{
+    color: black;
+  }
+  a{
+    text-decoration: none;
+  }
+  a{
+    color: black;
+  }
+}
 
+.main__contents__box2{
+  display: flex;
+  &__store2{
+  height: 350px;
+  width: 300px;
+  border: 3px solid #00704a;
+  margin-left: 20px;
+  display: flex;
+  margin-top: 20px;
+  }
+  &__name2 {
+    color: black;
+  }
+  &__outlet2{
+    color: black;
+  }
+  a{
+    text-decoration: none;
+  }
+  a{
+    color: black;
   }
 }
 
@@ -41,4 +139,5 @@
   width: 300px;
   border: 3px solid #00704a;
   display: flex;
+  
 }

@@ -1,10 +1,18 @@
+=render "stores/header"
+=render "stores/menubar"
+
 .review-main
  .review-main__review-header
   
  .review-main__review-form
   =form_for @reviews do |f|
-   .review-main__review-form__review-item-image
+   .form{id: 'formId'} 
     = render 'layouts/error_messages', model: f.object
+    = f.label :店舗, class:"review-main__review-form__review-label"
+    = f.label :必須 ,class:"review-main__review-form__review-label__need"
+    = f.collection_select :store_id, Store.all.where(ancestry: nil), :id, :name,{prompt: "選択してください"}, name: '',id: "parent-form",selected:true
+   .review-main__review-form__review-item-image
+    
     =f.label :画像, class:"review-main__review-form__review-label"
     =f.label :任意, class:"review-label__free"
     =f.file_field :image, class: "hidden-field"
@@ -41,8 +49,7 @@
    .review-main__review-form__submit
     =f.submit "投稿する",class: "review-main__review-form__submit__form"
    .review-main__review-form__back
-    =link_to root_path do
-     %p もどる
-   .review-main__review-form__rool
-    %p 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、
-    %br法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
+    =link_to "戻る",root_path ,class: "review-main__review-form__"
+  
+    
+  

@@ -4,6 +4,7 @@ ja:
       review: レビュー 
     attributes:
       review:
+        store: 店舗
         plag_id: コンセント
         visit: 日付
         congestion_id: 混雑
