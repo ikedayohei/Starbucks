@@ -1,3 +1,5 @@
+=render "stores/header"
+
 .wrapper
   .topContents
     .contents
@@ -62,6 +64,11 @@
             %i{class:"fa fa-comment"}
             コメントする
             
-      .relatedItem
-        =link_to root_path ,data: {"turbolinks" => false} do
-          トップページへ戻る
+  %ul.topform
+    
+  .relatedItem
+    =link_to root_path ,data: {"turbolinks" => false} do
+      トップページへ戻る
+
+
+=render "stores/footer"
