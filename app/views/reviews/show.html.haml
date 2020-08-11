@@ -1,1 +1,67 @@
-%P w
+.wrapper
+  .topContents
+    .contents
+      .itembox
+        %h1.itembox__name 
+        .itembox__imagebox
+          %ul.imagebig
+            %li#bigimage
+              =image_tag src="https://s3-ap-northeast-1.amazonaws.com/mercarimaster/uploads/captured_image/content/13/a007.png"
+            
+        .itembox__price
+          
+          
+      .itembox__Dtail
+        
+        
+      .itemtable
+        %table
+          %tb
+            %tr
+              %th 店舗名
+              %td グランフロント大阪店
+
+            %tr
+              %th 日付
+              %td 2020/07/30 13:00
+
+                
+            %tr
+              %th  混雑
+              %td 混雑している
+            %tr
+              %th  コンセント
+              %td コンセントあり
+            %tr
+              %th  評価
+              %td  ★★★★
+            %tr
+              %th  コメント
+              %td  最高！！
+            
+      .optionArea
+        %ul
+          %li.okini
+            =link_to "#" do
+              %i{class: "fa fa-star"}
+              お気に入り 0
+        %ul
+          %li.hata
+            =link_to "#" do
+              %i{class: "fa fa-flag"}
+              不適切な評価の通報
+      -# コメントフォーム
+      .commentBox
+        =form_for "#" do |f|
+          =f.text_area :text
+          %p.noticeMsg
+            相手のことを考え丁寧なコメントを心がけましょう。
+            %br
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          %button{name:"button", type:"submit",class:"commentBtn"}
+            %i{class:"fa fa-comment"}
+            コメントする
+            
+      .relatedItem
+        =link_to root_path ,data: {"turbolinks" => false} do
+          トップページへ戻る
