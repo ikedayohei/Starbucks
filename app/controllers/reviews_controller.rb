@@ -20,11 +20,30 @@ class ReviewsController < ApplicationController
     else
      render :new
      end
-   end
+  end
 
-   def show
+  def show
     @review =Review.find(params[:id])
-   end
+  end
+
+  def edit
+    @reviews =Review.find(params[:id])
+  end
+
+  def update
+    @reviews =Review.find(params[:id])
+    if @reviews.update(review_params)
+      redirect_to :root
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @reviews =Review.find(params[:id])
+    @reviews.destroy
+    redirect_to :root
+  end
 
   private
 

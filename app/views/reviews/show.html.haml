@@ -40,6 +40,12 @@
             %tr
               %th  コメント
               %td  最高！！
+      .buy-box
+        - if user_signed_in?
+          - if @review.user_id == current_user.id
+            = link_to '編集', edit_review_path(@review) ,class:"edit-btn",data:{turbolinks: :false}
+            = link_to '削除', review_path(@review), method: :delete, data: { confirm: "削除しますか？" } ,class:"delete-btn"
+          
             
       .optionArea
         %ul
