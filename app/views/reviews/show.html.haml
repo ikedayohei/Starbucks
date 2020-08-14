@@ -61,7 +61,7 @@
                   =icon('fa','user')
                 .commentText__list__content
                   .commentText__list__content__name
-                    = link_to comment.user.nickname, user_path(current_user.id)
+                    = link_to comment.user.name, user_path(current_user.id)
                   .commentText__list__content__message
                     = comment.text
                   .commentText__list__content__date
