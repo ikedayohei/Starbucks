@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :set_review, only: [:show]
+
   def new
     @reviews = Review.new
     respond_to do |format|
