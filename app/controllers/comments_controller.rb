@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   def create
   @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to root_path
+      redirect_to review_path(@comment.review.id)
     else
      render :show
     end
