@@ -56,7 +56,7 @@
       .commentBox
         -if user_signed_in?
           =form_for [@review, @comment] do |f|
-            = f.text_area :text, disabled: true
+            = f.text_area :text, class: "com-text" ,size: "48x7" 
             .noticeMsg
               %p
                 相手のことを考え丁寧なコメントを心がけましょう。
