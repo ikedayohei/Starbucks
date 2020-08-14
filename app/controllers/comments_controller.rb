@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:content).merge(user_id: current_user.id, report_id: params[:report_id])
+    params.require(:comment).permit(:text).merge(user_id: current_user.id, review_id: params[:review_id])
   end
 
 end
