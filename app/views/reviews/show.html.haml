@@ -52,11 +52,11 @@
             =link_to "#" do
               %i{class: "fa fa-flag"}
               不適切な評価の通報
-      .commentText{data: {review: {id: review.id}}}
+      .commentText
         -if user_signed_in?
           - if @comments
             - @comments.each do |comment|
-              .commentText__list{data: {comment: {id: comment.id}}}
+              .commentText__list
                 .commentText__list__icon
                   =icon('fa','user')
                 .commentText__list__content
@@ -78,7 +78,7 @@
                 相手のことを考え丁寧なコメントを心がけましょう。
                 %br 不快な言葉遣いなどは利用制限や退会処分となることがあります。
             %br
-            = f.submit "コメントする", class: "commentBtn", disabled: true
+            = f.submit "コメントする", class: "commentBtn"
         -else
             
   %ul.topform
