@@ -23,6 +23,7 @@ class ReviewsController < ApplicationController
    end
 
    def show
+    @comment = Comment.new
     @review =Review.find(params[:id])
    end
    

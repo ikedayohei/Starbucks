@@ -54,15 +54,16 @@
               不適切な評価の通報
       -# コメントフォーム
       .commentBox
-        =form_for "#" do |f|
-          =f.text_area :text
-          %p.noticeMsg
-            相手のことを考え丁寧なコメントを心がけましょう。
+        -if user_signed_in?
+          =form_for [@review, @comment] do |f|
+            = f.text_area :text, disabled: true
+            .noticeMsg
+              %p
+                相手のことを考え丁寧なコメントを心がけましょう。
+                %br 不快な言葉遣いなどは利用制限や退会処分となることがあります。
             %br
-            不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %button{name:"button", type:"submit",class:"commentBtn"}
-            %i{class:"fa fa-comment"}
-            コメントする
+            = f.submit "コメントする", class: "commentBtn", disabled: true
+        -else
             
   %ul.topform
     
