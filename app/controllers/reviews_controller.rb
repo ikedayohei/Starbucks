@@ -24,6 +24,7 @@ class ReviewsController < ApplicationController
 
    def show
     @comment = Comment.new
+    @comments = @item.comments.includes(:user)
     @review =Review.find(params[:id])
    end
    
