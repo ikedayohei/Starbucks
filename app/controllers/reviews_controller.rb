@@ -25,7 +25,6 @@ class ReviewsController < ApplicationController
    def show
     @comment = Comment.new
     @comments = @review.comments.includes(:user)
-    @review =Review.find(params[:id])
    end
    
 
@@ -33,5 +32,9 @@ class ReviewsController < ApplicationController
 
   def review_params
    params.require(:review).permit(:comment,:visit,:time_id,:congestion_id,:plag_id,:point_id,:store_id,:image).merge(user_id: current_user.id)
+  end
+
+  def set_review
+    @review =Review.find(params[:id])
   end
 end
