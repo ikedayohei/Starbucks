@@ -10,4 +10,7 @@ $('new_commetn').on('sumbit',function(e){
     processData: false,
     contentType: false
   })
+  .done(function(data){
+    var html = buildHTML(data);
+  })
 })
