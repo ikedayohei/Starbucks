@@ -3,9 +3,11 @@ class CommentsController < ApplicationController
   def create
   @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to review_path(@comment.review.id)
+      respond_to do |format|
+        format.json
+      end
     else
-     render :show
+      redirect_to review_path(@comment.review.id)
     end
   end
 
