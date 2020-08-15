@@ -7,7 +7,7 @@ $(document).ready(function(){
         </div>
         <div class="commentText__list__content">
           <div class="commentText__list__content__name">
-            ${comment.user.name}
+            ${comment.user_name}
           </div>
           <div class="commentText__list__content__message">
             ${comment.text}
@@ -17,12 +17,14 @@ $(document).ready(function(){
           </div>
         </div>
       </div>`
+                  
     return html;
   }
-  $('new_commetn').on('sumbit',function(e){
+  
+  $('#new_comment').on('submit', function(e){
     e.preventDefault();
-    var fomData = new FormData(this);
-    var url =$(this).attr('action');
+    var formData = new FormData(this);
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -34,14 +36,14 @@ $(document).ready(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.commentText').append(html);
-      $('#coomtent_text').val('');
-      $('commentBtn').prop('disabled',false);
+      $('#comment_text').val('');
+      $('.commentBtn').prop('disabled', false);
     })
-    })
-    $(".new_comment").submit(function(){
-      if($("comment_text").val() == ""){
-        alert("コメント欄が空欄です！");
-        return false;
-      }
-    });
+  })
+  $(".new_comment").submit(function(){
+    if($("#comment_text").val() == ""){
+      alert("コメントが空欄です！");
+      return false;
+    }
+  });
 })
