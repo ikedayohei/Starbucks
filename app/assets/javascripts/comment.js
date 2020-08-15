@@ -12,5 +12,8 @@ $('new_commetn').on('sumbit',function(e){
   })
   .done(function(data){
     var html = buildHTML(data);
+    $('.commentText').append(html);
+    $('#coomtent_text').val('');
+    $('commentBtn').prop('disabled',false);
   })
 })
