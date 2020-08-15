@@ -52,17 +52,34 @@
             =link_to "#" do
               %i{class: "fa fa-flag"}
               不適切な評価の通報
+      .commentText
+        -if user_signed_in?
+          - if @comments
+            - @comments.each do |comment|
+              .commentText__list
+                .commentText__list__icon
+                  =icon('fa','user')
+                .commentText__list__content
+                  .commentText__list__content__name
+                    = comment.user.name
+                  .commentText__list__content__message
+                    = comment.text
+                  .commentText__list__content__date
+                    = comment.updated_at.to_s(:datetime_jp)
+        -else
+          .commentText__list__content
       -# コメントフォーム
       .commentBox
-        =form_for "#" do |f|
-          =f.text_area :text
-          %p.noticeMsg
-            相手のことを考え丁寧なコメントを心がけましょう。
+        -if user_signed_in?
+          =form_for [@review, @comment] do |f|
+            = f.text_area :text, class: "com-text" ,size: "48x7" 
+            .noticeMsg
+              %p
+                相手のことを考え丁寧なコメントを心がけましょう。
+                %br 不快な言葉遣いなどは利用制限や退会処分となることがあります。
             %br
-            不快な言葉遣いなどは利用制限や退会処分となることがあります。
-          %button{name:"button", type:"submit",class:"commentBtn"}
-            %i{class:"fa fa-comment"}
-            コメントする
+            = f.submit "コメントする", class: "commentBtn"
+        -else
             
   %ul.topform
     
