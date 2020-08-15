@@ -9,3 +9,8 @@ ja:
         visit: 日付
         congestion_id: 混雑
         point_id: 評価
+
+ja:
+  time:
+    formats:
+      default: "%m/%d %H:%M"

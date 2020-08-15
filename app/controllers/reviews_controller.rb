@@ -33,7 +33,7 @@ class ReviewsController < ApplicationController
   def update
     @reviews =Review.find(params[:id])
     if @reviews.update(review_params)
-      redirect_to :root
+      redirect_to review_path(@reviews)
     else
       render :edit
     end
