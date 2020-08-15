@@ -1,4 +1,4 @@
-$(document),ready(function(){
+$(document).ready(function(){
   function buildHTML(comment){
     var html = 
       `<div class="commentText__list" data-comment-id=${comment.id}>
