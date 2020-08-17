@@ -1,5 +1,7 @@
 $(function(){
+  function buildHTML(comments){
 
+  }
   var reloadMessages = function() {
         
     var last_comment_id = $('.commentText__list:last').data("comment-id");
