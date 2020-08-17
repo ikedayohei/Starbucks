@@ -53,7 +53,7 @@
             =link_to "#" do
               %i{class: "fa fa-flag"}
               不適切な評価の通報
-      .commentText
+      .commentText{data: {review: {id: @review.id}}}
         -if user_signed_in?
           - if @comments
             - @comments.each do |comment|
