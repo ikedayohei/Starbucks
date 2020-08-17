@@ -31,11 +31,23 @@ $(function(){
       data: {id: last_comment_id}
     })
     .done(function(comments) {
-      console.log('success');
+      if (comments.length !== 0) {
+        var insertHTML = '';
+        $.each(comments, function(i, comment) {
+          insertHTML += buildHTML(comment)
+        });
+        $('.commentText').append(insertHTML);
+        $('.commentText__list').animate({ scrollTop: $('.commentText__list')[0].scrollHeight});
+      }
     })
     .fail(function() {
       alert('error');
     });
+    if (window.location.href.match(/\/reviews\/\d+/)) {
+      if (!window.location.href.match(/\/reviews\/\d+\/edit/)) {
+         setInterval(reloadMessages, 7000);
+      }
+    }
   };
 })
 $(document).ready(function(){
