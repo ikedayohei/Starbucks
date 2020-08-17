@@ -3,7 +3,6 @@ $(function(){
   let review_id = $(".commentText").data("review-id");
   console.log(last_comment_id);
 })
-
 $(document).ready(function(){
   function buildHTML(comment){
     var html = 
