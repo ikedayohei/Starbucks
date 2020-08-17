@@ -1,3 +1,9 @@
+$(function(){
+  var last_comment_id = $('.commentText__list:last').data("comment-id");
+  let review_id = $(".commentText").data("review-id");
+  console.log(last_comment_id);
+})
+
 $(document).ready(function(){
   function buildHTML(comment){
     var html = 
