@@ -1,6 +1,24 @@
 $(function(){
   function buildHTML(comments){
-
+    var html = 
+      `<div class="commentText__list" data-comment-id=${comment.id}>
+        <div class="commentText__list__icon">
+          <i class="fa fa-user"></i>
+        </div>
+        <div class="commentText__list__content">
+          <div class="commentText__list__content__name">
+            ${comment.user_name}
+          </div>
+          <div class="commentText__list__content__message">
+            ${comment.text}
+          </div>
+          <div class="commentText__list__content__date">
+            ${comment.created_at}
+          </div>
+        </div>
+      </div>`
+                  
+    return html;
   }
   var reloadMessages = function() {
         
