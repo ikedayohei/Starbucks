@@ -1,7 +1,22 @@
 $(function(){
-  var last_comment_id = $('.commentText__list:last').data("comment-id");
-  let review_id = $(".commentText").data("review-id");
-  console.log(last_comment_id);
+
+  var reloadMessages = function() {
+        
+    var last_comment_id = $('.commentText__list:last').data("comment-id");
+    let review_id = $(".commentText").data("review-id");
+    $.ajax({
+      url: `${review_id}/api/comments`,
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_comment_id}
+    })
+    .done(function(comments) {
+      console.log('success');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
 })
 $(document).ready(function(){
   function buildHTML(comment){
