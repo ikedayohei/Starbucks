@@ -1,5 +1,5 @@
 $(function(){
-  function buildHTML(comments){
+  function buildHTML(comment){
     var html = 
       `<div class="commentText__list" data-comment-id=${comment.id}>
         <div class="commentText__list__icon">
