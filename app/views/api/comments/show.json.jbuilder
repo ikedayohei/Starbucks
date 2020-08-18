@@ -1,1 +1,2 @@
-json.array! @comments do |comments|
+json.array! @comments do |comment|
+  json.text  comment.text
