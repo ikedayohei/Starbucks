@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
   function buildHTML(comment){
     var html = 
       `<div class="commentText__list" data-comment-id=${comment.id}>
@@ -20,10 +20,9 @@ $(function(){
                   
     return html;
   }
-  var reloadMessages = function() {
-        
-    var last_comment_id = $('.commentText__list:last').data("comment-id");
-    let review_id = $(".commentText").data("review-id");
+    var reloadMessages = function() {
+      var last_comment_id = $('.commentText__list:last').data("comment-id");
+      let review_id = $(".commentText").data("review-id");
     $.ajax({
       url: `${review_id}/api/comments`,
       type: 'get',
@@ -31,6 +30,7 @@ $(function(){
       data: {id: last_comment_id}
     })
     .done(function(comments) {
+      console.log("test3")
       if (comments.length !== 0) {
         var insertHTML = '';
         $.each(comments, function(i, comment) {
