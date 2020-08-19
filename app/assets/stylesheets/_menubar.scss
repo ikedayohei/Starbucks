@@ -75,6 +75,20 @@
     }
   }
   &__update{
-    
+    color:white;
+    width: 300px;
+    line-height: 80px;
+    font-size: 30px;
+    text-align: center;
+    background: #333;
+    &:hover {
+      background-color: #00704a;;
+      color: black;
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+
   }
 }
