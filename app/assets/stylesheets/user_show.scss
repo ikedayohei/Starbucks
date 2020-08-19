@@ -7,5 +7,11 @@
     width: 300px;
     background-color: yellowgreen;
   }
+  &__right {
+    height: 100%;
+    width: calc(100% - 300px);
+    background-color: bisque;
+
+  }
   
 }
