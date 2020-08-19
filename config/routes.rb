@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   end
   resources :reviews do
     resources :comments, only: [:create, :destroy]
+    namespace :api do
+      resources :comments, only: :index, defaults: { format: 'json' }
+    end
   end
 end
