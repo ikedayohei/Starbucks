@@ -19,5 +19,15 @@
    -@reviews.each do |review|
     -if review.image.present?
      =image_tag review.image.url, class:'main__contents__store__image' 
+     .mypage-main__right__main__name
+      =review.plag.name
+      %br
+      =review.point.name
+      %br
+      =review.store.root.name
+      %br
+      =review.store.parent.name
+      %br
+      =review.store.name
 
   
