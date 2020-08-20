@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def show
     @number = @user.reviews.count(:id)
-    @reviews = @user.reviews.estimate.page(params[:page]).per(6)
+    @reviews = @user.reviews.page(params[:page]).per(6)
   end
   
   
