@@ -2,6 +2,7 @@
 =render "users/menubar"
 .mypage-main
  .mypage-main__left
-  = current_user.name
+  .mypage-main__left__user_name
+    = current_user.name
   = current_user.email
  .mypage-main__right
