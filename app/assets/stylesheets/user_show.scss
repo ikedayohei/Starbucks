@@ -5,10 +5,17 @@
   &__left{
     height: 100%;
     width: 300px;
+    &__user_name{
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    }
   }
   &__right {
     height: 100%;
     width: calc(100% - 300px);
+
 
   }
   
