@@ -16,8 +16,8 @@
    ="#{@number}件"
  .mypage-main__right
   .mypage-main__right__main
-    -@reviews.each do |review|
-      -if review.image.present?
-        =image_tag review.image.url, class:'main__contents__store__image' 
+   -@reviews.each do |review|
+    -if review.image.present?
+     =image_tag review.image.url, class:'main__contents__store__image' 
 
   
