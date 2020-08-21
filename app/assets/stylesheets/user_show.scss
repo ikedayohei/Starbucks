@@ -29,8 +29,8 @@
   &__right {
     height: 100%;
     width: calc(100% - 300px);
-
-
+    display: flex;
+    flex-wrap:wrap;
   }
   
 }
