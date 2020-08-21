@@ -2,7 +2,6 @@
 =render "users/menubar"
 .mypage-main
  .mypage-main__left
-  .mypage-main__left__title
   .mypage-main__left__user_name
    ユーザー名
    %br
@@ -16,6 +15,8 @@
    %br
    ="#{@number}件"
  .mypage-main__right
+  .mypage-main__right__title
+   レビュー
   .mypage-main__right__main
    -@reviews.each do |review|
     -if review.image.present?
