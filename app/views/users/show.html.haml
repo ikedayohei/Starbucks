@@ -1,37 +1,37 @@
 =render "stores/header"
 =render "users/menubar"
 .mypage-main
- .mypage-main__left
-  .mypage-main__left__user_name
-   ユーザー名
-   %br
-   = current_user.name
-  .mypage-main__left__user_eamil
-   メールアドレス
-   %br
-   = current_user.email
-  .mypage-main__left__user_review
-   レビュー数
-   %br
-   ="#{@number}件"
- .mypage-main__right
-  .mypage-main__right__title
-   Myレビュー
-  .mypage-main__right__paginate
-   =paginate(@reviews)
-  .mypage-main__right__main
-   -@reviews.each do |review|
-    -if review.image.present?
-     =image_tag review.image.url, class:'main__contents__store__image' 
-     .mypage-main__right__main__name
-      =review.plag.name
+  .mypage-main__left
+    .mypage-main__left__user_name
+      ユーザー名
       %br
-      =review.point.name
+      = current_user.name
+    .mypage-main__left__user_eamil
+      メールアドレス
       %br
-      =review.store.root.name
+      = current_user.email
+    .mypage-main__left__user_review
+      レビュー数
       %br
-      =review.store.parent.name
-      %br
-      =review.store.name
+      ="#{@number}件"
+  .mypage-main__right
+    .mypage-main__right__title
+      Myレビュー
+    .mypage-main__right__paginate
+      =paginate(@reviews)
+    .mypage-main__right__main
+      -@reviews.each do |review|
+        =link_to review_path(review.id),data:false do
+          -if review.image.present?
+            =image_tag review.image.url, class:'main__contents__store__image' 
+        .mypage-main__right__main__name
+          =review.plag.name
+          %br
+          =review.point.name
+          %br
+          =review.store.root.name
+          %br
+          =review.store.parent.name
+          %br
+          =review.store.name
 
-  
