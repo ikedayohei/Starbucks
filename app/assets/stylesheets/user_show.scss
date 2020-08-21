@@ -29,6 +29,13 @@
   &__right {
     height: 100%;
     width: calc(100% - 300px);
+    &__title {
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    margin: 0 auto;
+
+    }
     &__main{
       display: flex;
       flex-wrap:wrap;
