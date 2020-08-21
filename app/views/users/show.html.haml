@@ -17,6 +17,8 @@
  .mypage-main__right
   .mypage-main__right__title
    Myレビュー
+  .mypage-main__right__paginate
+   =paginate(@reviews)
   .mypage-main__right__main
    -@reviews.each do |review|
     -if review.image.present?
