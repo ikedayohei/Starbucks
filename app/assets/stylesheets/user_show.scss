@@ -31,10 +31,13 @@
     width: calc(100% - 300px);
     &__title {
     height: 50px;
-    width: 200px;
-    font-size: 24px;
-    margin: 0 auto;
-
+    width: 500px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 210px;
+    background-color:  #00704a;
+    color: white;
     }
     &__main{
       display: flex;
