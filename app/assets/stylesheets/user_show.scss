@@ -29,14 +29,13 @@
   &__right {
     height: 100%;
     width: calc(100% - 300px);
-    display: flex;
-    flex-wrap:wrap;
     &__main{
+      display: flex;
+      flex-wrap:wrap;
       width: 1000px;
       height: 100%;
-      background-color: blanchedalmond;
       &__name{
-        
+      width: 200px;
       }
     }
   }
