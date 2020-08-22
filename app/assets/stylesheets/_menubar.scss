@@ -13,6 +13,7 @@
     background: #333;
     margin-left: 3px;
     margin-right: 1px;
+    border-radius: 3px;
     &:hover {
       background-color:#c6893f;
       color: black;
@@ -31,6 +32,7 @@
   background: #333;
   margin-left: 3px;
   margin-right: 1px;
+  border-radius: 3px;
   &:hover {
     background-color: #00704a;
     color: black;
@@ -49,6 +51,7 @@
   background: #333;
   margin-right: 3px;
   margin-left: 3px;
+  border-radius: 3px;
   &:hover {
     background-color:#c6893f;
     color: black;
@@ -66,6 +69,7 @@
     text-align: center;
     background: #333;
     margin-left: 3px;
+    border-radius: 3px;
     &:hover {
       background-color: #00704a;;
       color: black;
@@ -84,6 +88,7 @@
     background: #333;
     margin-right: 1px;
     margin-left: 1px;
+    border-radius: 3px;
     &:hover {
       background-color: #00704a;;
       color: black;
