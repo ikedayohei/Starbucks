@@ -34,21 +34,24 @@
     margin: 0 auto;
     color: white;
     }
-    &__user_current{
+    &__user_current-email{
     height: 50px;
     width: 200px;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 50px;
     text-align: center;
     margin: 0 auto;
     color:black;
     }
     &__user_review{
-      height: 50px;
-      width: 100%;
-      font-size: 20px;
-      text-align: center;
-      margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #00704a;
+    margin: 0 auto;
+    color: white;
     }
   }
   &__right {
