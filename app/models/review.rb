@@ -6,7 +6,11 @@ class Review < ApplicationRecord
 
   has_many :comments
   has_many :bookmarks, dependent: :destroy
-  
+
+  def bookmark_by?(user)
+    bookmarks.where(user_id: user.id).exists?
+  end
+
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :plag
   belongs_to_active_hash :congestion
