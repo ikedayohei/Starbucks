@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end
   end
   resources :reviews do
+    resource :bookmarks, only: %i[create destroy]
+    get :bookmarks, on: :collection
     resources :comments, only: [:create, :destroy]
     namespace :api do
       resources :comments, only: :index, defaults: { format: 'json' }
