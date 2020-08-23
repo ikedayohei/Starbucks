@@ -1,8 +1,6 @@
 .menubar
  .menubar__home
   =link_to "HOME", root_path
- .menubar__menu
-  MENU
  .menubar__mypage
   - if user_signed_in?
    =link_to "マイページ", user_path(current_user)
