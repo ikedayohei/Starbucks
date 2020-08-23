@@ -5,6 +5,7 @@ class Review < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   has_many :comments
+  has_many :bookmarks, dependent: :destroy
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :plag
