@@ -6,4 +6,6 @@ class User < ApplicationRecord
          
   validates :name, presence: true, uniqueness: true
   has_many :reviews
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_reviews, through: :bookmarks, source: :review
 end
