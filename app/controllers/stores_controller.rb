@@ -14,6 +14,10 @@ class StoresController < ApplicationController
     end
   end
 
+  def bookmarks
+    @boards = current_user.bookmark_boards.includes(:user).recent
+  end
+
   def search
     respond_to do |format|
       format.html

@@ -6,7 +6,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    current_user.bookmarks.find_by(board_id: params[:board_id]).destroy!
-    redirect_to boards_path, success: t('.flash.not_bookmark')
+    current_user.bookmarks.find_by(review_id: params[:review_id]).destroy!
+    redirect_to root_path, success: t('.flash.not_bookmark')
   end
 end
