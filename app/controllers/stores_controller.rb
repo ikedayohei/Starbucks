@@ -15,7 +15,7 @@ class StoresController < ApplicationController
   end
 
   def bookmarks
-    @boards = current_user.bookmark_boards.includes(:user).recent
+    @reviewss = current_user.bookmark_boards.includes(:user).recent
   end
 
   def search
