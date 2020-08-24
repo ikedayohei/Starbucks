@@ -15,6 +15,7 @@
                 .main__contents__box__name
                   =review.plag.name
                 .main__contents__box__outlet
+                  = render 'bookmark_area', review: review
                   =review.point.name
                   %br
                   =review.store.root.name
