@@ -11,7 +11,7 @@ stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
 #ポート番号を指定
-listen "#{app_path}/tmp/sockets/unicorn.sock"
+listen 3000
 
 #エラーのログを記録するファイルを指定
 stderr_path "#{app_path}/log/unicorn.stderr.log"
