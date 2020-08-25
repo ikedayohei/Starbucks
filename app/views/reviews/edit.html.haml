@@ -1,0 +1,49 @@
+.review-main
+ .review-main__review-header
+  
+ .review-main__review-form
+  =form_for @reviews do |f|
+   .form{id: 'formId'} 
+    = render 'layouts/error_messages', model: f.object
+    = f.label :店舗, class:"review-main__review-form__review-label"
+    = f.label :必須 ,class:"review-main__review-form__review-label__need"
+    = f.collection_select :store_id, Store.all.where(ancestry: nil), :id, :name,{prompt: "選択してください"}, name: '',id: "parent-form",selected:true
+   .review-main__review-form__review-item-image
+    
+    =f.label :画像, class:"review-main__review-form__review-label"
+    =f.label :任意, class:"review-label__free"
+    =f.file_field :image, class: "hidden-field"
+    %P{class:"review-main__review-form__review-text"} 
+   
+   .review-main__review-form__review-item-name
+    =f.label :日付, class:"review-main__review-form__review-label" 
+    =f.label :必須,  class:"review-main__review-form__review-label__need" 
+    =f.datetime_field :visit,class: "review-main__review-form__review-item-brand__form"
+   
+    
+   .listing-product-detail__category
+    %p{class:"listing-product-detail__category__detail"} 
+    =f.label :混雑, class:"review-main__review-form__review-label"
+    =f.label :必須, class:"review-main__review-form__review-label__need"
+    .listing-select-wrapper
+     .listing-select-wrapper__box
+      = f.collection_select :congestion_id, Congestion.all, :id, :name, {prompt: "選択してください"},class: "review-main__review-form__status__form"
+   .review-main__review-form__review-item-size
+    =f.label :コンセント, class:"review-main__review-form__review-label" 
+    =f.label :必須,  class:"review-main__review-form__review-label__need"
+    = f.collection_select :plag_id, Plag.all, :id, :name, {prompt: "選択してください"},class: "review-main__review-form__status__form"
+   .review-main__review-form__review-item-brand
+    = f.fields_for :brand do |brand|
+     =f.label :評価 ,class:"review-main__review-form__review-label" 
+     =f.label :必須,  class:"review-main__review-form__review-label__need"
+     = f.collection_select :point_id, Point.all, :id, :name, {prompt: "選択してください"},class: "review-main__review-form__status__form"
+   .review-main__review-form__status
+    =f.label :コメント,class:"review-main__review-form__review-label"
+    =f.label :任意, class:"review-label__free"
+    =f.text_field :comment,class: "review-main__review-form__review-item-explanation__form"
+   
+   .review-main__review-form__profit
+   .review-main__review-form__submit
+    =f.submit "更新する",class: "review-main__review-form__submit__form"
+   .review-main__review-form__back
+    =link_to "戻る",root_path ,class: "review-main__review-form__"
