@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @number = @user.reviews.count(:id)
     @reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
-    @bookmarks = Bookmark.where("user_id = ?", @user).bookmark_user.page(params[:page]).per(3)
+    @bookmarks = Bookmark.where("user_id = ?", @user).order("created_at DESC").page(params[:page]).per(3)
   end
   
   def bookmarks
