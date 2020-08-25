@@ -6,7 +6,9 @@ class UsersController < ApplicationController
     @reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
   end
   
-  
+  def bookmarks
+    @reviews = current_user.bookmark_boards.includes(:user).recent
+  end
   
   def edit
   end
