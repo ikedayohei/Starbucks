@@ -108,6 +108,14 @@
         color: white;
         border-radius: 3px;
         }
+        &__paginate{
+          height: 50px;
+          width: 500px;
+          margin-top: 10px;
+          a{
+            color: blue;
+          }
+        }
       }
     }
   }
