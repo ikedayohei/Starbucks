@@ -21,20 +21,22 @@
       =paginate(@reviews)
     .mypage-main__right__main
       -@reviews.each do |review|
-        =link_to review_path(review.id),data:false do
-          -if review.image.present?
-            =image_tag review.image.url, class:'main__contents__store__image' 
-        .mypage-main__right__main__name
-          お気に入りに追加
-          =render 'bookmark_area', review: review
-          %br
-          =review.plag.name
-          %br
-          =review.point.name
-          %br
-          =review.store.root.name
-          %br
-          =review.store.parent.name
-          %br
-          =review.store.name
+        .mypage-main__right__main__up
+          =link_to review_path(review.id),data:false do
+            -if review.image.present?
+              =image_tag review.image.url, class:'main__contents__store__image' 
+          .mypage-main__right__main__name
+            お気に入りに追加
+            =render 'bookmark_area', review: review
+            %br
+            =review.plag.name
+            %br
+            =review.point.name
+            %br
+            =review.store.root.name
+            %br
+            =review.store.parent.name
+            %br
+            =review.store.name
+        .mypage-main__right__main__down
 
