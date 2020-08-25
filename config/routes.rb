@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:show, :edit, :update]
   root 'stores#index'
   resources :stores do
     collection do
@@ -8,5 +8,9 @@ Rails.application.routes.draw do
     end
   end
   resources :reviews do
+    resources :comments, only: [:create, :destroy]
+    namespace :api do
+      resources :comments, only: :index, defaults: { format: 'json' }
+    end
   end
 end

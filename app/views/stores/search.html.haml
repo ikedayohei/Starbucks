@@ -34,7 +34,8 @@
         .search-main__right__box__item
           -@result.each do |store|
             .search-main__right__box__item__item-box
-              = image_tag store.image.url , size: '220x200',class:"item-image"
+              = link_to review_path(store.id),data:false do
+                = image_tag store.image.url , size: '220x200',class:"item-image"
               %br
               = store.store.root.name
               %br

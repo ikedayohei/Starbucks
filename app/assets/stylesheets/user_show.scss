@@ -1,0 +1,99 @@
+.mypage-main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  &__left{
+    height: 315px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: rgb(245, 245, 245);
+    border: solid 1px black;
+    border-radius: 3px;
+    &__user_name{
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #00704a;
+    margin: 0 auto;
+    color: white;
+    margin-top: 10px;
+    border-radius: 3px;
+    }
+    &__user_current{
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    color:black;
+    }
+    &__user_eamil{
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #00704a;
+    margin: 0 auto;
+    color: white;
+    border-radius: 3px;
+    }
+    &__user_current-email{
+    height: 50px;
+    width: 200px;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    color:black;
+    }
+    &__user_review{
+    height: 50px;
+    width: 200px;
+    font-size: 22px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #00704a;
+    margin: 0 auto;
+    color: white;
+    border-radius: 3px;
+    }
+  }
+  &__right {
+    height: 100%;
+    width: calc(100% - 300px);
+    &__title {
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    margin-left: 210px;
+    background-color:#c6893f;
+    color: white;
+    border-radius: 3px;
+    }
+    &__paginate{
+    height: 50px;
+    width: 500px;
+    margin-top: 10px;
+    a{
+      color: blue;
+    }
+    }
+    &__main{
+      display: flex;
+      flex-wrap:wrap;
+      width: 1000px;
+      height: 100%;
+      &__name{
+      width: 200px;
+      }
+    }
+  }
+  
+}

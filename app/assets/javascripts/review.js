@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', ()=> {
+$(document).ready(function() {
   $('#parent-form').on('change', function(){
     let parentValue = document.getElementById("parent-form").value;
     

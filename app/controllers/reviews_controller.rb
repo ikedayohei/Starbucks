@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :set_review, only: [:show]
+
   def new
     @reviews = Review.new
     respond_to do |format|
@@ -24,6 +26,8 @@ class ReviewsController < ApplicationController
 
   def show
     @review =Review.find(params[:id])
+    @comment = Comment.new
+    @comments = @review.comments.includes(:user)
   end
 
   def edit
@@ -45,9 +49,14 @@ class ReviewsController < ApplicationController
     redirect_to :root
   end
 
+
   private
 
   def review_params
    params.require(:review).permit(:comment,:visit,:time_id,:congestion_id,:plag_id,:point_id,:store_id,:image).merge(user_id: current_user.id)
+  end
+
+  def set_review
+    @review =Review.find(params[:id])
   end
 end

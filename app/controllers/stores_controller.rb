@@ -32,6 +32,7 @@ class StoresController < ApplicationController
     
   end
 
+
   def get_category_children
     @store_children = Store.find_by(name: "#{params[:parent_name]}", ancestry: nil).children
   end
