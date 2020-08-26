@@ -48,18 +48,16 @@
             .mypage-main__right__main__down__main__box
               =link_to review_path(review.id),data:false do
                 -if review.review.image.present?
-                  =image_tag review.image.url, class:'main__contents__store__image'
+                  =image_tag review.review.image.url, class:'main__contents__store__image'
               .mypage-main__right__main__down__main__box__name
-                =render 'bookmark_area', review: review
+                =review.review.plag.name
                 %br
-                =review.plag.name
+                =review.review.point.name
                 %br
-                =review.point.name
+                =review.review.store.root.name
                 %br
-                =review.store.root.name
+                =review.review.store.parent.name
                 %br
-                =review.store.parent.name
-                %br
-                =review.store.name
+                =review.review.store.name
        
 
