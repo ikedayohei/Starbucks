@@ -2,10 +2,15 @@ class UsersController < ApplicationController
   before_action :set_user, only:[:show,:edit,:update,:destory]
   
   def show
+    @user = User.find(params[:id])
     @number = @user.reviews.count(:id)
     @reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
+    @bookmarks = Bookmark.where("user_id = ?", @user).order("created_at DESC").page(params[:page]).per(3)
   end
   
+  def bookmarks
+    @reviews = current_user.bookmark_boards.includes(:user).recent
+  end
   
   def edit
   end
