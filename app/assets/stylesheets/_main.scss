@@ -6,7 +6,7 @@
   width: 100%;
   flex-direction: column;
   &__contents{
-    height: 1800px;
+    height: 1000px;
     &__title {
     height: 70px;
     text-align: center;
@@ -46,6 +46,7 @@
       color: blue;
     }
     &__box{
+      height: 400px;
       width: 1350px;
       padding-top: 50px;
       display: flex;
@@ -54,6 +55,7 @@
       padding: 10px;
     }
     &__box2{
+      height: 400px;
       width: 100%;
       padding-top: 50px;
       display: flex;
