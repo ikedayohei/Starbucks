@@ -21,17 +21,43 @@
       =paginate(@reviews)
     .mypage-main__right__main
       -@reviews.each do |review|
-        =link_to review_path(review.id),data:false do
-          -if review.image.present?
-            =image_tag review.image.url, class:'main__contents__store__image' 
-        .mypage-main__right__main__name
-          =review.plag.name
-          %br
-          =review.point.name
-          %br
-          =review.store.root.name
-          %br
-          =review.store.parent.name
-          %br
-          =review.store.name
+        .mypage-main__right__main__up
+          =link_to review_path(review.id),data:false do
+            -if review.image.present?
+              =image_tag review.image.url, class:'main__contents__store__image' 
+          .mypage-main__right__main__name
+            お気に入りに追加
+            =render 'bookmark_area', review: review
+            %br
+            =review.plag.name
+            %br
+            =review.point.name
+            %br
+            =review.store.root.name
+            %br
+            =review.store.parent.name
+            %br
+            =review.store.name
+      .mypage-main__right__main__down
+        .mypage-main__right__main__down__title
+          お気に入り一覧
+        .mypage-main__right__main__down__paginate
+          =paginate(@bookmarks)
+        .mypage-main__right__main__down__main
+          -@bookmarks.each do |review|
+            .mypage-main__right__main__down__main__box
+              =link_to review_path(review.id),data:false do
+                -if review.review.image.present?
+                  =image_tag review.review.image.url, class:'main__contents__store__image'
+              .mypage-main__right__main__down__main__box__name
+                =review.review.plag.name
+                %br
+                =review.review.point.name
+                %br
+                =review.review.store.root.name
+                %br
+                =review.review.store.parent.name
+                %br
+                =review.review.store.name
+       
 
