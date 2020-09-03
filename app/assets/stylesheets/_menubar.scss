@@ -14,6 +14,7 @@
     margin-left: 3px;
     margin-right: 1px;
     border-radius: 3px;
+    
     &:hover {
       background-color:#c6893f;
       color: black;
@@ -21,6 +22,7 @@
     a{
       text-decoration: none;
       color: white;
+      display: block;
     }
   }
   &__menu {
@@ -39,6 +41,7 @@
   a{
     text-decoration: none;
     color: white;
+    display: block;
   }
   }
   &__mypage {
@@ -58,6 +61,7 @@
   a{
     text-decoration: none;
     color: white;
+    display: block;
   }
   }
   &__search{
@@ -75,6 +79,7 @@
     a{
       text-decoration: none;
       color: white;
+      display: block;
     }
   }
   &__update{
@@ -94,6 +99,7 @@
     a{
       text-decoration: none;
       color: white;
+      display: block;
     }
 
   }
