@@ -1,4 +1,7 @@
 class BookmarksController < ApplicationController
+  before_action :set_review, only: [:show]
+
+
   def create
     bookmark = current_user.bookmarks.build(review_id: params[:review_id])
     bookmark.save!
