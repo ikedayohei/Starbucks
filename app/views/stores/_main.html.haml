@@ -39,7 +39,6 @@
                 -if review.image.present?
                   =image_tag review.image.url, class:'main__contents__store__image' 
                 .main__contents__box2__name2
-                  = render 'bookmark_area', review: review
                   %br
                   =review.plag.name
                 .main__contents__box2__outlet2
