@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   def create
     bookmark = current_user.bookmarks.build(review_id: params[:review_id])
     bookmark.save!
-    redirect_to root_path, success: t('.flash.bookmark')
+    redirect_to review_path, success: t('.flash.bookmark')
   end
 
   def destroy
