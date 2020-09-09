@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :set_review, only: [:show]
+  before_action :set_review, only: [:create,:destroy]
 
 
   def create
