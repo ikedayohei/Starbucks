@@ -13,9 +13,6 @@
                 -if review.image.present?
                   =image_tag review.image.url, class:'main__contents__store__image' 
                 .main__contents__box__name
-                  お気に入りに追加
-                  = render 'bookmark_area', review: review
-                  %br
                   =review.plag.name
                 .main__contents__box__outlet
                  
@@ -39,9 +36,6 @@
                 -if review.image.present?
                   =image_tag review.image.url, class:'main__contents__store__image' 
                 .main__contents__box2__name2
-                  お気に入りに追加
-                  = render 'bookmark_area', review: review
-                  %br
                   =review.plag.name
                 .main__contents__box2__outlet2
                   =review.point.name
