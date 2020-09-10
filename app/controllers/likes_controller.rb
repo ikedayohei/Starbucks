@@ -9,11 +9,11 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    like = Like.find_by(user_id: current_user.id, item_id: params[:item_id])
+    like = Like.find_by(user_id: current_user.id, review_id: params[:review_id])
     like.destroy
-    @likes = Like.where(item_id: params[:item_id])
-    @items = Item.all
-    @item.reload
+    @likes = Like.where(review_id: params[:review_id])
+    @reviews = Review.all
+    @review.reload
 
   end
 
