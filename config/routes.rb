@@ -10,11 +10,13 @@ Rails.application.routes.draw do
     end
   end
   resources :reviews do
+    resources :likes, only: [:create, :destroy]
     collection do
       post   '/like/:review_id' => 'likes#create',   as: 'create'
       delete '/like/:review_id' => 'likes#destroy', as: 'destroy'
     end
     resource :bookmarks, only: %i[create destroy]
+    
     get :bookmarks, on: :collection
     resources :comments, only: [:create, :destroy]
     namespace :api do

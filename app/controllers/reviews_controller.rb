@@ -49,6 +49,10 @@ class ReviewsController < ApplicationController
     redirect_to :root
   end
 
+  def like
+    @likes = Like.where(user_id: @user.id)
+  end
+
 
   private
 
