@@ -9,7 +9,7 @@
             = review.likes.count.to_s
         
     - else
-      = link_to destroy_items_path(@item.id), method: :post, remote: true do
+      = link_to destroy_review_path(@review.id), method: :post, remote: true do
         .heart-icon
           %i{class: "fa fa-heart"}
           %span いいね！
