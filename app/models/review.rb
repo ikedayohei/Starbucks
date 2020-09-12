@@ -4,6 +4,7 @@ class Review < ApplicationRecord
   
   mount_uploader :image, ImageUploader
 
+  has_many :likes, dependent: :destroy
   has_many :comments
   has_many :bookmarks, dependent: :destroy
 
