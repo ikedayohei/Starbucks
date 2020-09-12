@@ -56,10 +56,9 @@
           
             
       .optionArea
-        %ul
+        %ul.vertical_like
+          = render partial: 'likes/like', locals: { review: @review}
           %li.okini
-            = render partial: 'likes/like', locals: { review: @review }
-
         %ul
           %li.hata
             =link_to "#" do
