@@ -44,7 +44,7 @@
           -@review.each do |review|
             .mypage-main__right__main__down__main__box
               =link_to review_path(review.id),data:false do
-                -if review.review.image.present?
+                -if review.image.present?
                   =image_tag review.review.image.url, class:'main__contents__store__image'
               .mypage-main__right__main__down__main__box__name
                 =review.plag.name
