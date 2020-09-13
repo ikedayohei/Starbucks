@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @number = @user.reviews.count(:id)
-    @reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
+    @my_reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
     @bookmarks = Bookmark.where("user_id = ?", @user).order("created_at DESC").page(params[:page]).per(3)
     @likes = Like.where(user_id: current_user.id)
     @review = @likes.map(&:review)
