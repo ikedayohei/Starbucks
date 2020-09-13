@@ -41,7 +41,7 @@
         .mypage-main__right__main__down__paginate
           =paginate(@bookmarks)
         .mypage-main__right__main__down__main
-          -@bookmarks.each do |review|
+          -@review.each do |review|
             .mypage-main__right__main__down__main__box
               =link_to review_path(review.id),data:false do
                 -if review.review.image.present?
