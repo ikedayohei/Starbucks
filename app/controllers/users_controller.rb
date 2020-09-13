@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @number = @user.reviews.count(:id)
     @my_reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
-    @bookmarks = Bookmark.where("user_id = ?", @user).order("created_at DESC").page(params[:page]).per(3)
     @likes = Like.where(user_id: current_user.id)
     @review = @likes.map(&:review)
     @reviews = Review.all
@@ -24,17 +23,6 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def like
-    @likes = Like.where(user_id: current_user.id)
-    @review = @reviews.map(&:item)
-    @items = Item.all
-  end
-  
-  def likes
-    @user = User.find(params[:id])
-    @likes = Like.where(user_id: @user.id)
   end
 
   private
