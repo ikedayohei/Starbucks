@@ -37,8 +37,6 @@
               = link_to review_path(store.id),data:false do
                 = image_tag store.image.url , size: '220x200',class:"item-image"
               %br
-              = render 'bookmark_area', review: store
-              %br
               = store.store.root.name
               %br
               =store.store.parent.name
