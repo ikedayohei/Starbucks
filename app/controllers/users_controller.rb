@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
     @bookmarks = Bookmark.where("user_id = ?", @user).order("created_at DESC").page(params[:page]).per(3)
     @likes = Like.where(user_id: current_user.id)
-    @review = @reviews.map(&:review)
+    @review = @likes.map(&:review)
     @reviews = Review.all
   end
   
