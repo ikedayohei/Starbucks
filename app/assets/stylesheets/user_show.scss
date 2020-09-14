@@ -73,6 +73,15 @@
       color: white;
       border-radius: 3px;
     }
+    &__user_current-like{
+      height: 50px;
+      width: 200px;
+      font-size: 22px;
+      line-height: 50px;
+      text-align: center;
+      margin: 0 auto;
+      color:black;
+     }
   }
   &__right {
     height: 100%;
