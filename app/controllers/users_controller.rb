@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @number = @user.reviews.count(:id)
+    @like = @user.likes.count(:id)
     @my_reviews = @user.reviews.order('created_at DESC').page(params[:page]).per(6)
     @likes = Like.where(user_id: current_user.id)
     @review = @likes.map(&:review)
