@@ -62,6 +62,17 @@
     color: white;
     border-radius: 3px;
     }
+    &__user_like{
+      height: 50px;
+      width: 200px;
+      font-size: 22px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #00704a;
+      margin: 0 auto;
+      color: white;
+      border-radius: 3px;
+    }
   }
   &__right {
     height: 100%;
