@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_23_082130) do
+ActiveRecord::Schema.define(version: 2020_09_12_032606) do
 
   create_table "bookmarks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -40,6 +40,15 @@ ActiveRecord::Schema.define(version: 2020_08_23_082130) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_likes_on_review_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "plags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -62,6 +71,7 @@ ActiveRecord::Schema.define(version: 2020_08_23_082130) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes_count"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -89,5 +99,7 @@ ActiveRecord::Schema.define(version: 2020_08_23_082130) do
 
   add_foreign_key "bookmarks", "reviews"
   add_foreign_key "bookmarks", "users"
+  add_foreign_key "likes", "reviews"
+  add_foreign_key "likes", "users"
   add_foreign_key "reviews", "users"
 end
