@@ -4,6 +4,7 @@ class StoresController < ApplicationController
   def index
     @reviews = Review.includes(:user).order('created_at DESC').page(params[:page]).per(8)
     @stores = Review.includes(:user).where(store_id: "1550").all.order("created_at DESC").page(params[:page]).per(8)
+    @all_ranks = Review.find(Like.group(:review_id).order('count(review_id) desc').limit(3).pluck(:review_id))
   end
 
   def new
