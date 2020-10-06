@@ -45,10 +45,23 @@
                   =review.store.parent.name
                   %br
                   =review.store.name
-
-
-
-
-
-            
-                  
+    .main__contents__title2
+      ランキング
+    .main__contents__box2
+      - @all_ranks.each do |review|
+        .main__contents__box__store2
+          .main__contents__store2__imagebox2
+            .main__contents__store2__image2
+              =link_to review_path(review.id),data:false do
+                -if review.image.present?
+                  =image_tag review.image.url, class:'main__contents__store__image' 
+                .main__contents__box2__name2
+                  =review.plag.name
+                .main__contents__box2__outlet2
+                  =review.point.name
+                  %br
+                  =review.store.root.name
+                  %br
+                  =review.store.parent.name
+                  %br
+                  =review.store.name
